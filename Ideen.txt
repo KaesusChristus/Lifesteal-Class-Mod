@@ -1,0 +1,329 @@
+############################################################################################################
+
+Ausrüstung:
+
+	Unholy Crystal of Life:
+
+		Funktion:
+
+			Kombiniert die Funktionen von Unholy Mana Crystal und Crystonthorn
+
+
+		Wie bekommt man es?
+
+			Crafting:
+	
+				01 Unholy Mana Crystal
+				01 Crystalthorn
+				10 Hallowedbars
+
+
+			Wo kann man es craften?
+			
+				Tinkerer´s Workshop
+
+
+		Wann bekommt man es?
+
+			Nach einen mechanischen Boss verfügbar
+
+
+
+
+	Dirty Bandage: (Oder so)
+
+		Funktion:
+
+			Reduziert Lebenskosten bei Waffen um 3 Punkte
+
+
+		Wie bekommt man es?
+
+			In Goldtruhen im Untergrund findbar
+
+
+		Wann bekommt man es?
+
+			Ab beginn der Welt verfügbar
+
+
+		Sonstiges:
+			Werde hierfür die Items die Oft erscheinen die chance überschreiben
+			Also anstelle von Leuchtpistole, Mace, Band der Regeneration, Magic Mirror
+			(Mal sehen)
+
+
+
+
+	Name:
+
+		Funktion:
+
+			20% Deiner Lebenskosten werden duch Manakosten ausgetauscht
+			Jegliche Lebenskosten reduzierung wirkt nicht mehr sollange dieses
+			Item ausgerüstet ist
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				3 Bloody veins
+				3 Mana Crystal
+				6 Shadow Scale // Tissue Sample
+
+
+			Wo kann man es Craften?
+
+				Demonaltar
+
+
+		Wann bekommt man es?
+
+			Nach EoW/BoC verfügbar
+
+
+
+
+	Name:
+
+		Funktion:
+
+			Hat eine chance keine Lebenskosten zu bezahlen
+
+
+		Wie bekommt man es?
+
+			???
+
+
+		Wann bekommt man es?
+
+			???
+
+
+############################################################################################################
+
+Rüstung:
+
+############################################################################################################
+
+Sicheln/Sensen:
+
+	Royal Bee Stinger:
+
+		Funktion:
+
+			Schießt ein Projektil (SickleAI, also sich selber)
+			Zusätzlch soll es dann nach kurzer Distanz stehen bleiben
+			(sowie Vanilla DeathSickle)
+
+			Wenn das Projektil stehen bleibt schießt es Hornet Stingers in Richtung
+			Gegner
+
+			OnKill Projektil werden 3 - 6 Friendly Bees gespawnt
+
+			Es kann nur ein Projektil gleichzeitig existieren (Man kann aber trotzdem
+			die ganze Zeit die Sichel schwingen)
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				18 Beewax
+				12 Lifeshards
+
+
+			Oder man bekommt es von Queen Bee zu 33.33%
+
+
+		Wann bekommt man es?
+
+			Nach Queen Bee verfügbar
+
+
+
+
+	Desertfrost Scythe:
+
+		Funktion:
+
+			Schießt ein Projektil (SickleAI, also sich selber)
+
+			Bei Linksklick soll es ein Sandiges Projektil sein
+			Wenn dieses Projektil stirbt, sollen viele kleinere eigene
+			Sandprojektile spawnen die mit Gravitation runterfallen und den
+			HellFire debuff auf Gegner machen können.
+
+			Wenn man Rechtsklick drückt verschießt man ein gefrorenes Projektil
+			Wenn dieses Projektil stirbt, sollen wenige kleinere eigene
+			Eisprojektile spawnen die dann homing sind und den
+			Forstburn debuff auf Gegner machen können.
+
+			Referenziert zu 'Das logischte der Welt'
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				50 Iceblocks
+				20 Hellstonebar
+				8 Soul of Blood
+				1 Forbidden Fragment
+				1 Frostcore
+
+
+			Wo kann man es Craften?
+
+				Mythril Anvil
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+
+
+	Bloodextractor:
+
+		Funktion:
+
+			Heilt grundsätzlich nicht durch normale angriffe.
+
+			Speichert den verursachten Schaden als verminderter Heilung in
+			der Waffe (also nicht: Schaden = Heilung).
+
+			Heilung kann man durch Rechtsklick erhalten.
+
+			Debuff mit einem Cooldown. Kann keine Heilung währrend dem cooldown speichern.
+
+			Cooldown vllt so 1min (muss mal schauen wie stark oder schwach die ist und die
+			Werte anpassen).
+
+			Schießt Geisterartige Projektile (sonst schwierig für Hardmode)
+			Geistprojektil hat selbe attribute wie das orignal aber mit 50% weniger Heilung
+			Simples Projektil-movement
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				20 Titanbar / Adamantitebar
+				5 Soul of Night
+				12 Soul of Blood
+				10 Bloody Veins
+
+
+			Wo kann man es craften?
+
+				Mythril anvil
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+		Sonstiges:
+
+			Sollte eine Maximale Heilung haben (entweder eine feste Zahl
+			oder basierend auf maxLife. Vllt so 30% - 40%)
+
+
+
+
+FractaliteStaff // Andere Waffen:
+
+	Bone Striking Staff: (oder so)
+
+		Funktion:
+
+			XStrikeAI
+			Spawnt bei OnHitNPC die Skulls vom Skull buch was man von Skeleton bekommt
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				45 Bone
+				40 Lifeshards
+				1 Book of Skulls
+
+			Wo kann man es Craften?
+
+				Boneschweiß ding
+
+
+		Wann bekommt man es?
+
+			Nach Skeletron verfügbar
+
+
+
+
+	Crystal Explosion: (Andere Waffen)
+
+		Funktion:
+
+			Spawnt langsame eigene Projektile
+			Bei jeden dritten Treffer bei einem NPC sollen 100 kleine Kristallprojektile
+			um dem NPC herum spawnen
+			Die sollen in einem Kreis um den gegner sehr schnell alle hintereinander spawnen
+			Mit ein kleinen random offset (also schon näher am gegner oder weiter weg)
+			Erst wenn alle Projektile gespawnt sind sollen die alle in der spawnreihenfolge
+			angreifen.
+
+			Außerdem sollen die nur den getroffenen NPC angreifen sonst sollen die kapputt gehen
+
+			Projektile sollen homing sein
+
+			UseTime soll sehr langsam sein (40 - 50 oder so)
+
+			Lifecost: 100 HP
+
+			Referenziert zu '100.... mal.... 3....'
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				100 Kristallsplitter
+				100 Lifeshard
+				100 Bloodcells
+				8 Soul of Blood
+				15 Soul of Light
+
+
+			Wo kann man es Craften?
+
+				Mythril Anvil
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+		Sonstiges:
+
+			Aussehen keine Ahnung. Vllt mache ich ein Buch daraus und im Crafting rezept muss
+			dann noch das Tome rein was man vom Zauberer bekommt
+
+
+
+
+############################################################################################################
+
+Items:
+
+############################################################################################################
+
+Andere:
+
+	Flask sollten für Speere und Sicheln wirken

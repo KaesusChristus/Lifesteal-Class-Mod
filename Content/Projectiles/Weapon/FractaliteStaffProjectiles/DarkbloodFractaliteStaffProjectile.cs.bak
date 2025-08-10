@@ -1,0 +1,79 @@
+﻿using Terraria;
+using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using Terraria.Audio;
+using Terraria.ID;
+using LifeStealMod.Common.Utils;
+using LifeStealMod.Content.Core;
+
+namespace LifeStealMod.Content.Projectiles.Weapon.FractaliteStaffProjectiles
+{
+    public class DarkbloodFractaliteStaffProjectile : ModProjectile
+    {
+        public override void SetDefaults()
+        {
+            Projectile.width = 3;
+            Projectile.height = 3;
+            Projectile.scale = 4f;
+            Projectile.alpha = 128;
+
+            Projectile.friendly = true;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = -1;
+            Projectile.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Projectile.timeLeft = 300;
+            Projectile.velocity *= 30f;
+            Projectile.ArmorPenetration = 8;
+
+            Projectile.aiStyle = CustomAiStyleID.ReboundHoming;
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+
+            // Alphawert setzen
+            Color drawColor = lightColor * ((255 - Projectile.alpha) / 255f);
+
+            Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
+            float rotation = Projectile.rotation;
+            SpriteEffects effects = Projectile.direction == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, drawColor, rotation, origin, Projectile.scale, effects, 0);
+
+            return false; // wir haben selbst gezeichnet
+        }
+
+        public override void AI()
+        {
+            Vector2 dustOffset = Projectile.velocity.SafeNormalize(Vector2.Zero) * -2f; // versetzt die Partikel etwas nach hinten
+
+            // Wechsel zwischen Farben pro Frame
+            Color[] colors = new Color[] { Color.Purple, Color.Red };
+
+            for (int i = 0; i < colors.Length; i++)
+            {
+                Vector2 position = Projectile.Center + dustOffset + (Projectile.velocity.RotatedBy(MathHelper.ToRadians(i * 10 - 5)) * 0.2f); // kleiner seitlicher Offset für Farbeffekte
+                Dust dust = Dust.NewDustPerfect(position, DustID.Fireworks);
+                dust.color = colors[i];
+                dust.noGravity = true;
+                dust.velocity = Vector2.Zero;
+                dust.scale = 0.8f;
+            }
+        }
+
+
+        public override void Kill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Item27, Projectile.Center);
+
+            if (Main.rand.NextFloat() < 0.05f) // 5%
+            {
+                Item.NewItem(Projectile.GetSource_FromThis(), Projectile.position, Projectile.width, Projectile.height, ItemID.Heart);
+            }
+        }
+    }
+}

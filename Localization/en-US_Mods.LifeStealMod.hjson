@@ -1,0 +1,317 @@
+DamageClasses: {
+	LifestealClass.DisplayName: Lifesteal Class
+	Lifestealdamage.DisplayName: lifesteal damage
+	LifestealDamage.DisplayName: Lifesteal Damage
+}
+
+Items: {
+	LifeShard: {
+		DisplayName: Life Shard
+		Tooltip: `Shatterd from Life Crystals`
+	}
+
+	ToothOfCthulhu: {
+		DisplayName: Tooth Of Cthulhu
+		Tooltip:
+			'''
+			4% increased critical strike chance
+			Have a chance to spawn a small Eye of Cthulhu
+			to attack the opponent and heal you
+			'''
+	}
+
+	DarkHalberd: {
+		DisplayName: Dark Halberd
+		Tooltip: Killing an enemy heals the player by 4
+	}
+
+	DarkBloodBreastplate: {
+		DisplayName: Dark Blood Breastplate
+		Tooltip:
+			'''
+			10% increased lifesteal damage
+			3% increased critical strike chance
+			'''
+	}
+
+	DarkBloodHelmet: {
+		DisplayName: Dark Blood Helmet
+		Tooltip:
+			'''
+			5% increased lifesteal damage
+			2% increased critical strike chance
+			'''
+	}
+
+	DarkBloodLeggins: {
+		DisplayName: Dark Blood Leggins
+		Tooltip:
+			'''
+			8% increased movement speed
+			2% increased critical strike chance
+			'''
+	}
+
+	HealinfoDisplayItem: {
+		Tooltip:
+			'''
+			Displays the Heal per second (only includes Lifesteal Items)
+			Does not work properly yet. Work in progress...
+			'''
+		DisplayName: Healinfo Display Item
+	}
+
+	LifeBar: {
+		Tooltip: ""
+		DisplayName: Life Bar
+	}
+
+	SpearFromTheDevil: {
+		Tooltip: Killing an enemy heals you by 8
+		DisplayName: Spear from the Devil
+	}
+
+	Flur: {
+		DisplayName: Flur
+		Tooltip: `Looks fluffy`
+	}
+
+	YetiBreastplate: {
+		DisplayName: Yeti Breastplate
+		Tooltip:
+			'''
+			12% increased lifesteal damage
+			5% increased critical strike chance
+			'''
+	}
+
+	YetiHood: {
+		DisplayName: Yeti Hood
+		Tooltip:
+			'''
+			12% increased lifesteal damage
+			2% increased critical strike chance
+			'''
+	}
+
+	YetiLeggins: {
+		DisplayName: Yeti Leggins
+		Tooltip:
+			'''
+			10% increased movement speed
+			2% increased critical strike chance
+			'''
+	}
+
+	DarkBloodCrystal: {
+		DisplayName: Dark Blood Crystal
+		Tooltip: Lifesteal items add an additional 2 healing
+	}
+
+	BloodCells: {
+		DisplayName: Blood Cells
+		Tooltip: `Looks scuff`
+	}
+
+	GreaterLifeCrystal: {
+		DisplayName: Greater Life Crystal
+		Tooltip:
+			'''
+			Increases your Maxlife by 100 while equipped
+			Increases your Baseheal by 1
+			'''
+	}
+
+	DarkManaSoul: {
+		DisplayName: Dark Mana Soul
+		Tooltip:
+			'''
+			Increases maximum health by an amount equal to the player's maximum mana.
+			Overrides other sources of health increase (except armor).
+			'''
+	}
+
+	GoldenFractaliteStaff: {
+		Tooltip: ""
+		DisplayName: Golden Fractalite Staff
+	}
+
+	PlatinFractaliteStaff: {
+		DisplayName: Platin Fractalite Staff
+		Tooltip: ""
+	}
+
+	DarkbloodFractaliteStaff: {
+		DisplayName: Darkblood Fractalite Staff
+		Tooltip: ""
+	}
+
+	VampiricLeafFractaliteStaff: {
+		DisplayName: Vampiric Leaf Fractalite Staff
+		Tooltip: Has a chance to poison enemies
+	}
+
+	WoodenSplitStaff: {
+		DisplayName: Wooden Split Staff
+		Tooltip: ""
+	}
+
+	FrozenWoodenSplitStaff: {
+		DisplayName: Frozen Wooden Split Staff
+		Tooltip: ""
+	}
+
+	FeatheredFractaliteStaff: {
+		DisplayName: Feathered Fractalite Staff
+		Tooltip: ""
+	}
+
+	SoulOfBlood: {
+		DisplayName: Soul of Blood
+		Tooltip: `The essence of liquid life`
+	}
+
+	BloodyVeins: {
+		DisplayName: Bloody Veins
+		Tooltip: `Is this still alive?`
+	}
+
+	CrystalThorn: {
+		DisplayName: Crystal Thorn
+		Tooltip: Converts overheal to bonusdamage
+	}
+
+	SlimeSickle: {
+		Tooltip: ""
+		DisplayName: Slime Sickle
+	}
+
+	ShadowsWisdom: {
+		Tooltip: ""
+		DisplayName: Shadow's Wisdom
+	}
+
+	GoldScythe: {
+		DisplayName: Gold Scythe
+		Tooltip: ""
+	}
+
+	PlatinScythe: {
+		DisplayName: Platin Scythe
+		Tooltip: ""
+	}
+
+	IronSickle: {
+		DisplayName: Iron Sickle
+		Tooltip: ""
+	}
+
+	LeadSickle: {
+		DisplayName: Lead Sickle
+		Tooltip: ""
+	}
+
+	TheSlaughtersScythe: {
+		DisplayName: The Slaughter's Scythe
+		Tooltip: ""
+	}
+
+	ZomboidBreastplate: {
+		DisplayName: Zomboid Breastplate
+		Tooltip:
+			'''
+			12% increased lifesteal damage
+			40+ increased max health
+			'''
+	}
+
+	ZomboidHead: {
+		DisplayName: Zomboid Head
+		Tooltip:
+			'''
+			5% increased critical strike chance
+			Grants immunity to bleeding and poisoned
+			'''
+	}
+
+	ZomboidLegs: {
+		DisplayName: Zomboid Legs
+		Tooltip:
+			'''
+			8% increased movement speed
+			Increases jump height
+			'''
+	}
+
+	BloodyStinger: {
+		DisplayName: Bloody Stinger
+		Tooltip: ""
+	}
+
+	OvergrowthScythe: {
+		DisplayName: Overgrowth Scythe
+		Tooltip: Has a chance to poison enemies
+	}
+
+	AquaScythe: {
+		DisplayName: Aqua Scythe
+		Tooltip: ""
+	}
+
+	LavaSickle: {
+		DisplayName: Lava Sickle
+		Tooltip: "'Very chaotic'"
+	}
+
+	NightsScythe: {
+		DisplayName: Nights Scythe
+		Tooltip: ""
+	}
+}
+
+Projectiles: {
+	ToothOfCthulhuProjectile.DisplayName: Tooth Of Cthulhu Projectile
+	DarkHalberdProjectile.DisplayName: Dark Halberd Projectile
+	DarkBloodArmorSetProjectile.DisplayName: Dark Blood Armor Set Projectile
+	VampiricLeafHalberdProjectile.DisplayName: Vampiric Leaf Halberd Projectile
+	MoltenHalberdProjectile.DisplayName: Molten Halberd Projectile
+	AquaHalberdProjectile.DisplayName: Aqua Halberd Projectile
+	SpearFromTheDevilProjectile.DisplayName: Spear From The Devil Projectile
+	BloodyThornThornProjectile.DisplayName: Bloody Thorn Projectile
+	GoldenSpearProjectile.DisplayName: Golden Spear Projectile
+	PlatinSpearProjectile.DisplayName: Platin Spear Projectile
+	PulseLanceProjectile.DisplayName: Pulse Lance Projectile
+	PulseLanceGhoastProjectile.DisplayName: Pulse Lance Ghoast Projectile
+	PulseLanceGhostProjectile.DisplayName: Pulse Lance Ghost Projectile
+	GoldenFractaliteStaffProjectile.DisplayName: Golden Fractalite Staff Projectile
+	PlatinFractaliteStaffProjectile.DisplayName: Platin Fractalite Staff Projectile
+	DarkbloodFractaliteStaffProjectile.DisplayName: Darkblood Fractalite Staff Projectile
+	VampiricLeafFractaliteStaffProjectile.DisplayName: Vampiric Leaf Fractalite Staff Projectile
+	WoodenSplitStaffProjectile.DisplayName: Wooden Split Staff Projectile
+	FrozenWoodenSplitStaffProjectile.DisplayName: Frozen Wooden Split Staff Projectile
+	FeatheredFractaliteStaffProjectile.DisplayName: Feathered Fractalite Staff Projectile
+	CrystalThornProjectile.DisplayName: Crystal Thorn Projectile
+	SlimeSickleProjectile.DisplayName: Slime Sickle Projectile
+	ShadowsWisdomProjectile.DisplayName: Shadows Wisdom Projectile
+	TheSlaughtersScytheProjectile.DisplayName: The Slaughters Scythe Projectile
+	AquaScytheProjectile.DisplayName: Aqua Scythe Projectile
+	LavaSickleProjectile.DisplayName: Lava Sickle Projectile
+	NightsScytheProjectile.DisplayName: Nights Scythe Projectile
+}
+
+ItemSetBonus: {
+	DarkBloodSet: Heals you every 5 Seconds
+	YetiSet:
+		'''
+		Spawns projectiles that attacks enemies, if you healed yourself
+		Does only appear on Lifesteal heal
+		Damage based on healamount x2
+		'''
+	ZomboidSet:
+		'''
+		Increases Baseheal while health is below 50%
+		Decreases Lifecost while health is above 50%
+		'''
+}
+
+InfoDisplays.HealinfoDisplayEffect.DisplayName: Healinfo Display Effect

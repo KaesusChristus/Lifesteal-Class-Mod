@@ -1,0 +1,69 @@
+﻿using Terraria;
+using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using Terraria.Audio;
+using Terraria.ID;
+using LifeStealClass.Common.Utils;
+using LifeStealClass.Content.Core;
+
+namespace LifeStealClass.Content.Projectiles.Weapon.FractaliteStaffProjectiles
+{
+    public class GoldenFractaliteStaffProjectile : ModProjectile
+    {
+        public override void SetDefaults()
+        {
+            Projectile.width = 3;
+            Projectile.height = 3;
+            Projectile.scale = 4f;
+            Projectile.alpha = 128;
+
+            Projectile.friendly = true;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 1;
+            Projectile.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Projectile.timeLeft = 300;
+            Projectile.velocity *= 30f;
+            Projectile.ArmorPenetration = 5;
+
+            Projectile.aiStyle = CustomAiStyleID.ReboundHoming;
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+
+            // Alphawert setzen
+            Color drawColor = lightColor * ((255 - Projectile.alpha) / 255f);
+
+            Vector2 origin = new(texture.Width / 2f, texture.Height / 2f);
+            float rotation = Projectile.rotation;
+            SpriteEffects effects = Projectile.direction == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
+
+            Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, drawColor, rotation, origin, Projectile.scale, effects, 0);
+
+            return false; // wir haben selbst gezeichnet
+        }
+
+        public override void AI()
+        {
+            Color newColor = Color.Yellow;
+            for (int i = 0; i < 4; i++)
+            {
+                int dustIndex = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.RainbowTorch);
+                Main.dust[dustIndex].color = newColor;
+                Main.dust[dustIndex].noGravity = true;
+                Main.dust[dustIndex].scale = 0.8f;
+            }
+        }
+
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Item27, Projectile.Center);
+        }
+
+    }
+}

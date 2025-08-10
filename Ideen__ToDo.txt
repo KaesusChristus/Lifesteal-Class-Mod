@@ -1,0 +1,430 @@
+
+Ideen LifestealClass Mod
+
+#######################################################################################################
+
+Waffen:
+
+Fractalite Staff von Queen Bee der Bienen spawnt
+Sycthe von Queen Bee (Stachel von Queen Bee) der das Projectile spawnt was die im Kampf nutzt
+
+Fractalite Staffs und Sycthe von folgenden Sachen: Wüste(Geier?), Eis Biom, Granit, Marmor, Pilzbiom,
+Ozean(durch Angeln?), Goblin Armee, Blutmond, Meteor
+
+
+Sicheln/Sensen:
+
+	Darkblood Scythe:
+
+		Funktion:
+
+			Töten von Gegner bringt folgende Effekte für eine
+			bestimmte Dauer (vllt so 5s bis 10s):
+
+				Buffs:
+
+					Ironskin		10%
+
+					Battle			9%
+					Swiftness		9%
+	
+					Regeneration		7%
+					Shine			7%
+
+					Calm			6%
+
+					Thorns			5%
+
+					Rage			4%
+					Wrath			4%
+					Heartreach		4%
+
+					Endurance		3%
+					Gills			3%
+				
+					Lucky			2%
+				
+					Weapon Imbue: Fire	1.5%
+
+
+				Debuffs:
+
+					Bleeding		5%
+
+					Poisoned		4%
+
+					OnFire			3%
+					Slow			3%
+					Weak			3%
+					Water Candle		3%
+
+					Frostburn		2%
+
+					Ichor			1.5%
+
+					Broken Armor		1%
+
+
+			Einen Cooldown Debuff, wenn man ein Effekt erhalten hat
+			(Dauer wird genau so lange sein wie die Buff/Debuff Dauer)
+
+			Wenn 3 der oben genannten Buffs/Debuffs bereits am Spieler sind,
+			wird kein neuer Hinzugefügt
+			(Debuffs von Außerhalb also Mobs können noch dem Spieler hinzufügen.
+			Das gilt natürlich auch für Tränke)
+
+			Imunität gegen Debuffs sollten wirken
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				18 Lifebar
+				5 Bloody Veins
+				8 Shadow Scale // Tissue Sample
+
+
+		Wann bekommt man es?
+
+			Nach EoW/BoC verfügbar
+
+
+		Sonstiges:
+
+			Mal sehen, wie das ist ansonsten viel weniger Effekte zur
+			auswahl stellen.
+
+
+
+
+	Lava Sickle:
+
+		Funktion:
+
+			Schießt ein Projektil (SickleAI, also sich selber)
+
+			Spawnt beim fliegen alle 10 Ticks ein Projektil, was dann mit gravitation
+			runterfällt. Dann explodiert er nach 1 bis 2 Sekunden wenn er auf dem Boden liegt
+			und macht dann schaden.
+
+			Kein OnContact damage für dieses Projektil
+
+			Sichel selber und das Projektil kann das Volcano Projektil spawnen
+
+
+
+	Nights Scythe:
+
+		Funktion:
+
+			Hat diesen 3 Stufen hieb als UseStyle. Wenn der nicht funktioniert dann:
+			Schießt ein Projektil (SickleAI, also sich selber)
+
+			Dieses große leuchtene Projektil von Nightsedge beim 3. Schwung hinzufügen oder
+			halt bei jeden Schwung (je nach UseStyle)
+
+			Das SickleAI Projektil kann den Shadowflame Debuff verursachen
+
+			Wenn normaler Swing als UseStyle:
+
+				Heilung OnKill um 8 Punkte
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				1 Darkblood Scythe
+				1 Aqua Sickle
+				1 Overgrowth Scythe
+				1 Lava Sickle
+				20 Bloody Veins
+
+
+			Wo kann man es Craften?
+
+				Demonaltar
+
+
+		Wann bekommt man es?
+
+			Nach Skeleton Verfügbar
+
+
+		Sonstiges:
+
+			Wenn der 3 Hieb UseStyle nicht funktioniert, dann soll erstmal
+			bei jeden Swing ein Projektil spawnen also mit der SickleAI.
+			Wenn es aber doch funktioniert, dann nur beim 3. Swing (Damage anpassen!).
+
+
+
+
+	Royal Bee Stinger:
+
+		Funktion:
+
+			Schießt ein Projektil (SickleAI, also sich selber)
+			Zusätzlch soll es dann nach kurzer Distanz stehen bleiben
+			(sowie Vanilla DeathSickle)
+
+			Wenn das Projektil stehen bleibt schießt es Hornet Stingers in Richtung
+			Gegner
+
+			OnKill Projektil werden 3 - 6 Friendly Bees gespawnt
+
+			Es kann nur ein Projektil gleichzeitig existieren (Man kann aber trotzdem
+			die ganze Zeit die Sichel schwingen)
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				18 Beewax
+				12 Lifeshards
+
+
+			Oder man bekommt es von Queen Bee zu 33.33%
+
+
+		Wann bekommt man es?
+
+			Nach Queen Bee verfügbar
+
+
+
+
+	Bloodextractor:
+
+		Funktion:
+
+			Heilt grundsätzlich nicht durch normale angriffe.
+
+			Speichert den verursachten Schaden als verminderter Heilung in
+			der Waffe (also nicht: Schaden = Heilung).
+
+			Heilung kann man durch Rechtsklick erhalten.
+
+			Debuff mit einem Cooldown. Kann keine Heilung währrend dem cooldown speichern.
+
+			Cooldown vllt so 1min (muss mal schauen wie stark oder schwach die ist und die
+			Werte anpassen).
+
+			Schießt Geisterartige Projektile (sonst schwierig für Hardmode)
+			Geistprojektil hat selbe attribute wie das orignal aber mit 50% weniger Heilung
+			Simples Projektil-movement
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				20 Titanbar / Adamantitebar
+				5 Soul of Night
+				12 Soul of Blood
+				10 Bloody Veins
+
+
+			Wo kann man es craften?
+
+				Mythril anvil
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+		Sonstiges:
+			Sollte eine Maximale Heilung haben (entweder eine feste Zahl
+			oder basierend auf maxLife. Vllt so 30% - 40%)
+
+
+
+#######################################################################################################
+
+Gegner:
+
+#######################################################################################################
+
+Accessories:
+
+Accessories die Liferegen und baseheal erhöhen
+
+Etwas was dir eine Chance gibt einen größeren heal zu bekommen
+
+Das HealPerSec Item überarbeiten
+
+Bloody-Amulet: Verrringert die HP Kosten bei Waffen um ein Prozentsatz
+
+Etwas was die HP Kosten erhöht und den Damage um einen Prozentsatz erhöht
+
+Etwas was bei Crits die Heilung um eine bestimmten Prozentsatz erhöht
+
+Bloody Lifeshard: bei <25% Leben werden die HP Kosten stark reduziert und die Rüstung wird
+auf 0 gesetzt (Effekt mit cooldown oder so)
+
+
+
+Ausrüstung:
+
+	Unholy Crystal of Life:
+
+		Funktion:
+
+			Kombiniert die Funktionen von Unholy Mana Crystal und Crystonthorn
+
+
+		Wie bekommt man es?
+
+			Crafting:
+	
+				01 Unholy Mana Crystal
+				01 Crystalthorn
+				10 Hallowedbars
+				8 Soul of Blood
+
+
+			Wo kann man es craften?
+			
+				Tinkerer´s Workshop
+
+
+		Wann bekommt man es?
+
+			Nach einen mechanischen Boss verfügbar
+
+
+
+
+	Dirty Bandage: (Oder so)
+
+		Funktion:
+
+			Reduziert Lebenskosten bei Waffen um 3 Punkte
+
+
+		Wie bekommt man es?
+
+			In Goldtruhen im Untergrund findbar
+
+
+		Wann bekommt man es?
+
+			Ab beginn der Welt verfügbar
+
+
+		Sonstiges:
+			Werde hierfür die Items die Oft erscheinen die chance überschreiben
+			Also anstelle von Leuchtpistole, Mace, Band der Regeneration, Magic Mirror
+			(Mal sehen)
+
+
+
+
+	Name:
+
+		Funktion:
+
+			Eine chance keine Lebenskosten zu zahlen und wenn dies eintritt
+			muss man 50% der eigentlichen Lebenskosten in Manakosten bezahlen
+			
+			Beispiel: Chance tritt ein >> Waffe hat 14 Lebenskosten >> 7 Manakosten
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				3 Bloody veins
+				3 Mana Crystal
+				6 Shadow Scale // Tissue Sample
+
+
+			Wo kann man es Craften?
+
+				Demonaltar
+
+
+		Wann bekommt man es?
+
+			Nach EoW/BoC verfügbar
+
+
+
+
+	Name:
+
+		Funktion:
+
+			Hat eine chance keine Lebenskosten zu bezahlen
+
+
+		Wie bekommt man es?
+
+			Craften:
+
+				1 Item Über diesem hier (noch kein Namen)
+				3 Soul of Blood
+				7 Soul of Light
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+
+#######################################################################################################
+
+Rüstung:
+
+#######################################################################################################
+
+Items:
+
+	Bloody Mana Fragment:
+
+		Funktion:
+
+			Etwas womit man MaxMana dauerhaft erhöhen kann (10x um 10 mana erhöhen)
+
+
+		Wie bekommt man es?
+
+			Crafting:
+
+				15 Lifeshard
+				5 Bloody Veins
+				5 Soul of Blood
+
+
+			Wo kan man es Craften?
+
+				DemonAltar
+
+
+		Wann bekommt man es?
+
+			Nach WoF verfügbar
+
+
+
+#######################################################################################################
+
+Anderes:
+
+Den Lifesteal Dust überarbeten. Wenn ein lifesteal erfolgt sollen so 3-5 kleine Projektile beim
+getroffenen spawnen und dann zum Spieler fliegen und da dann verschwinden. Das ist dann auch
+nur eine reine cosmetic sache also die heilung passiert ja auch schon vorher
+
+Besondere Waffe die man im Dungeon öffnen kann (sowie Biomtruhen und deren Waffen).
+Dazu der Schlüssel im Hardmode währrend Bloodmoon verfügbar machen lassen oder so
+
+Vampre knives müssen zur Lifestealclass hinzugefügt werden
+
+Modifier für Lifestealclass hinzufügen
+
+Flask sollten für Speere und Sicheln wirken

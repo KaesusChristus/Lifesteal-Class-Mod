@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\sickle\\theslaughtersscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\theslaughtersscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\theslaughtersscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\theslaughtersscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\ironsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\ironsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\leadsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\leadsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\lifestealsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\lifestealsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\modplayers\\lifestealeffectsplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\modplayers\\lifestealeffectsplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TheSlaughtersScytheProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\TheSlaughtersScytheProjectile.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\Sickle\\TheSlaughtersScytheProjectile.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\TheSlaughtersScytheProjectile.cs",
+              "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\TheSlaughtersScytheProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T22:20:55.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TheSlaughtersScythe.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\TheSlaughtersScythe.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\TheSlaughtersScythe.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\TheSlaughtersScythe.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\TheSlaughtersScythe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T22:20:15.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IronSickle.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\IronSickle.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\IronSickle.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\IronSickle.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\IronSickle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T22:17:36.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeadSickle.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\LeadSickle.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\LeadSickle.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\LeadSickle.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\LeadSickle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T22:16:48.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LifestealSickle.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T21:52:10.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LifestealEffectsPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\ModPlayers\\LifestealEffectsPlayer.cs",
+              "RelativeDocumentMoniker": "Common\\ModPlayers\\LifestealEffectsPlayer.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\ModPlayers\\LifestealEffectsPlayer.cs",
+              "RelativeToolTip": "Common\\ModPlayers\\LifestealEffectsPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T17:04:46.586Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

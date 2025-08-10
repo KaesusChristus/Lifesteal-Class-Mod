@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealmod\\content\\items\\weapons\\sickle\\overgrowthscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|solutionrelative:content\\items\\weapons\\sickle\\overgrowthscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealmod\\content\\projectiles\\weapon\\sickle\\nightsscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\nightsscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealmod\\content\\items\\weapons\\sickle\\nightsscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|solutionrelative:content\\items\\weapons\\sickle\\nightsscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealmod\\content\\projectiles\\weapon\\sickle\\lavasickleprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\lavasickleprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealmod\\content\\items\\weapons\\sickle\\lavasickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealMod.csproj|solutionrelative:content\\items\\weapons\\sickle\\lavasickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OvergrowthScythe.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\OvergrowthScythe.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\OvergrowthScythe.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\OvergrowthScythe.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\OvergrowthScythe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T16:13:21.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NightsScytheProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T19:29:49.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NightsScythe.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\NightsScythe.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\NightsScythe.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\NightsScythe.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\NightsScythe.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwC0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T19:26:35.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LavaSickle.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\LavaSickle.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\LavaSickle.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Items\\Weapons\\Sickle\\LavaSickle.cs",
+              "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\LavaSickle.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T19:26:17.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LavaSickleProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Projectiles\\Weapon\\Sickle\\LavaSickleProjectile.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\Sickle\\LavaSickleProjectile.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealMod\\Content\\Projectiles\\Weapon\\Sickle\\LavaSickleProjectile.cs",
+              "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\LavaSickleProjectile.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T18:36:40.231Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

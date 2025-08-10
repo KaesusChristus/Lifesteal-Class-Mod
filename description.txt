@@ -1,0 +1,99 @@
+Lifesteal Class - Alpha Version v0.1
+
+Welcome to the Lifesteal Class Mod – a custom damage class focused on sickles, scythes, and blood-based magic-like weapons.
+This mod introduces only the new damage class, so you can easily add it to a vanilla-like playthrough without major changes.
+
+
+Core Features:
+
+Lifesteal Weapons – Mostly sickles and scythes that heal you on true melee hits. Most of them also have unique effects, special projectiles, or other abilities.
+Fractalite Staffs – Magic-like weapons that consume your health instead of mana. These weapons encourage you to play at high health, combining risk and strategy.
+Health over Defense – Players using this class are more likely to gain extra max life rather than defense.
+		      Some effects and accessories scale with your current or maximum life, creating unique builds.
+
+
+How Lifesteal Works
+
+On critical hits, a Lifesteal weapon will heal you for 5% of the damage dealt.
+For example: if you crit for 64 damage, you heal for 3 HP (rounded down).
+This system is still being balanced and may change in future updates!
+There are also alot of items that can heal you in other ways.
+
+Important!
+
+Lifesteal healing currently works on dummies for testing purposes only.
+Please disregard this behavior — it’s not intended for actual gameplay.
+As this is still an alpha version in active development, such effects may not
+reflect the final design.
+
+
+Current Content (Alpha)
+This is an early alpha version, so most of the content is currently limited to Pre-Hardmode.
+
+Here are the numbers of Items that are added to the Mod:
+
+Weapons: 	10 sickles/scythes, 7 Fractalite Staffs, 2 Other Weapons
+Armor Sets: 	3 sets: early game, post EoW/BoC, and pre-Hardmode
+Accessories: 	5 (+ a display-info accessory, work in progress)
+Other Items:	7 crafting materials
+Enemies: 	Planned
+Bosses: 	Currently not planned
+Sprites: 	Basic or placeholder (I'm not an expert at pixel art yet)
+
+The following Items has now Lifestealdamage instead of the standard damagetype:
+
+Bonehelm
+
+
+Development Info
+
+This is my first mod, and I'm still learning C# and the tModLoader framework.
+Damage and healing values may be unbalanced right now.
+I’d love any kind of feedback, bug reports, or suggestions from players trying out this alpha version!
+
+
+Want to Help? (Sprite Artists!)
+
+If you're a pixel artist and would like to contribute voluntarily (no payment involved), I'd be super grateful!
+All contributors will be credited as sprite designers in the mod.
+You're also welcome to submit your own custom vanity outfit, and I’ll happily add it to the mod — possibly with a secret in-game way to obtain it!
+Sprite sharing and communication will happen via Discord (chat only).
+
+Sprite Guidelines for Basic Items
+
+File format: .png
+The canvas size should exactly match the sprite’s dimensions (e.g. 64×64 px for a 64×64 item) –
+do not upscale to larger canvases like 512×512 or 1024×1024.
+Use a transparent background for any empty space (no solid colors).
+Important:
+
+If you're submitting animated items or equipment sprites (like armor or vanity sets),
+the sprite size may differ depending on the number of frames.
+For example: a 4-frame item animation would be 16×64 px (4 frames stacked vertically).
+Player-attached gear like helmets, chestplates, or wings must follow Terraria's equipment sprite standards (usually 18×18 or 20×20 per frame, depending on type).
+
+Please follow the vanilla Terraria style – clean, readable, and not overly detailed.
+Like Thorium, not Calamity.
+
+If you're interested, feel free to contact me!
+
+
+Contact & Feedback
+
+If you're interested in helping or want to give feedback, feel free to reach out to me:
+E-Mail: rizzo72yt@gmail.com
+I'll take note of everything you send as feedback and use it to improve the mod!
+
+
+Final Note
+
+This mod is just getting started — but the core mechanics are working, and I’d love to see what the community thinks.
+If you enjoy the concept, feel free to share the mod with your friends — and don’t forget to send me your feedback!
+
+Thank you all!
+
+Also thanks for the following people that helped me with atleast 1 sprite
+
+Fludi - 1 
+QuaQuao - We dont know yet
+

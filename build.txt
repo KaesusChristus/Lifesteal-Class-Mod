@@ -1,0 +1,3 @@
+displayName = Lifesteal Class Mod
+author = Sir Meempo
+version = 0.1.0.2
