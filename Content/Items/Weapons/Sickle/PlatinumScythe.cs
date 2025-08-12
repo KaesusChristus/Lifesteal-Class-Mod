@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
-    public class PlatinScythe : LifestealSickle
+    public class PlatinumScythe : LifestealSickle
     {
         private int tickTimer = 0;
         public override void SetDefaults()

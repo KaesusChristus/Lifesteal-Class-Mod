@@ -284,6 +284,11 @@ Mods: {
 				DisplayName: Nights Scythe
 				Tooltip: ""
 			}
+
+			PlatinumScythe: {
+				DisplayName: Platinum Scythe
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {
