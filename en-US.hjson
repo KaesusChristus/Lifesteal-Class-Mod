@@ -289,6 +289,16 @@ Mods: {
 				DisplayName: Platinum Scythe
 				Tooltip: ""
 			}
+
+			CopperSickle: {
+				DisplayName: Copper Sickle
+				Tooltip: ""
+			}
+
+			TinSickle: {
+				DisplayName: Tin Sickle
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {
