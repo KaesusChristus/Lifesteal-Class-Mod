@@ -8,8 +8,13 @@ using LifeStealClass.Content.Items.Ingredients;
 
 namespace LifeStealClass.Content.Items.Weapons.Spears
 {
-    public class SpearFromTheDevil : LifestealSpearWeapon
+    public class SpearFromTheDevil : LifestealSpearWeapon, IDashWeapon
     {
+        public new float DashSpeed => 23f;
+        public new int DashDuration => 9;
+        public new int DashCooldown => 600;
+        public new int DashDamageBonus => 120;
+        public new int DashCritBonus => 70;
 
         public override void SetDefaults()
         {
@@ -29,7 +34,11 @@ namespace LifeStealClass.Content.Items.Weapons.Spears
             Item.shootSpeed = 4f;
             Item.shoot = ModContent.ProjectileType<SpearFromTheDevilProjectile>();
 
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
+            Item.GetGlobalItem<HealthCost>().dashHealthCost = 34;
+            var dashStats = Item.GetGlobalItem<DashBonusStats>();
+            dashStats.dashDamageBonus = DashDamageBonus;
+            dashStats.dashCritBonus = DashCritBonus;
+
         }
 
         public override void AddRecipes()

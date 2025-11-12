@@ -7,8 +7,13 @@ using LifeStealClass.Content.Core;
 using LifeStealClass.Common.GlobalItems.Other;
 namespace LifeStealClass.Content.Items.Weapons.Spears
 {
-    public class DarkHalberd : LifestealSpearWeapon
+    public class DarkHalberd : LifestealSpearWeapon, IDashWeapon
     {
+        public new float DashSpeed => 20f;
+        public new int DashDuration => 8;
+        public new int DashCooldown => 180;
+        public new int DashDamageBonus => 80;
+        public new int DashCritBonus => 50;
 
         public override void SetDefaults()
         {
@@ -28,7 +33,11 @@ namespace LifeStealClass.Content.Items.Weapons.Spears
             Item.shootSpeed = 3.7f;
             Item.shoot = ModContent.ProjectileType<DarkHalberdProjectile>();
 
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 1;
+            Item.GetGlobalItem<HealthCost>().dashHealthCost = 25;
+
+            var dashStats = Item.GetGlobalItem<DashBonusStats>();
+            dashStats.dashDamageBonus = DashDamageBonus;
+            dashStats.dashCritBonus = DashCritBonus;
         }
 
         public override void AddRecipes()

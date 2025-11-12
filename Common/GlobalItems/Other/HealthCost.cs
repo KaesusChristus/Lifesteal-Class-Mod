@@ -12,6 +12,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
     public class HealthCost : GlobalItem
     {
         public int healthCost = 0;
+        public int dashHealthCost = 0;
 
         public override bool InstancePerEntity => true;
 
@@ -19,6 +20,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
         {
             HealthCost clone = (HealthCost)base.Clone(item, itemClone);
             clone.healthCost = healthCost;
+            clone.dashHealthCost = dashHealthCost;
             return clone;
         }
 
@@ -87,6 +89,8 @@ namespace LifeStealClass.Common.GlobalItems.Other
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             var global = item.GetGlobalItem<HealthCost>();
+
+            // Normaler HealthCost
             if (global.healthCost > 0)
             {
                 int reduction = 0;
@@ -99,7 +103,22 @@ namespace LifeStealClass.Common.GlobalItems.Other
                 {
                     OverrideColor = new Color(180, 0, 0)
                 };
+                tooltips.Add(line);
+            }
 
+            // Dash HealthCost
+            if (global.dashHealthCost > 0)
+            {
+                int reduction = 0;
+                if (Main.LocalPlayer != null && Main.LocalPlayer.TryGetModPlayer(out LifestealEffectsPlayer modPlayer))
+                    reduction = modPlayer.reduceLifecostFlat;
+
+                int displayDashCost = Math.Max(0, global.dashHealthCost - reduction);
+
+                var line = new TooltipLine(Mod, "DashHealthCost", $"Dash uses {displayDashCost} health")
+                {
+                    OverrideColor = new Color(255, 50, 50)
+                };
                 tooltips.Add(line);
             }
         }

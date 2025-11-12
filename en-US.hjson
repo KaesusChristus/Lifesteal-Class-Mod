@@ -335,6 +335,13 @@ Mods: {
 			DarkHalberdProjectile.DisplayName: Dark Halberd Projectile
 			SpearFromTheDevilProjectile.DisplayName: Spear From The Devil Projectile
 		}
+
+		Buffs: {
+			DashCooldownBuff: {
+				DisplayName: Dash Cooldown Buff
+				Description: Mods.LifeStealClass.Buffs.DashCooldownBuff.Description
+			}
+		}
 	}
 }
 

@@ -39,7 +39,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
             {
                 int total = baseHealOnHit + bonusHealOnHit;
 
-                var line = new TooltipLine(Mod, "OnHitHeal", $"Baseheal: {total}")
+                var line = new TooltipLine(Mod, "OnHitHeal", $"Truemelee Heal: {total}")
                 {
                     OverrideColor = new Color(0, 200, 0)
                 };
