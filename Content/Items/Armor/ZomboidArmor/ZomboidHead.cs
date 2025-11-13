@@ -29,7 +29,7 @@ namespace LifeStealClass.Content.Items.Armor.ZomboidArmor
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(ModContent.GetInstance<LifestealDamage>()) += CritStrikeChance;
+            player.GetCritChance(ModContent.GetInstance<HarvesterDamage>()) += CritStrikeChance;
             player.buffImmune[BuffID.Bleeding] = true;
             player.buffImmune[BuffID.Poisoned] = true;
         }

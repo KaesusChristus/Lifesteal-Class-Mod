@@ -33,7 +33,7 @@ namespace LifeStealClass.Common.ModPlayers
             if (proj.localAI.Length > 1 && proj.localAI[1] == 1f || allowHeal == false)
                 return;
 
-            if (proj.DamageType == ModContent.GetInstance<LifestealDamage>())
+            if (proj.DamageType == ModContent.GetInstance<HarvesterDamage>())
             {
                 crit = hit.Crit;
                 AddDamage(damageDone);

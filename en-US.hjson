@@ -6,7 +6,11 @@ DamageClasses: {
 
 Mods: {
 	LifeStealClass: {
-		DamageClasses.LifestealDamage.DisplayName: Lifesteal Damage
+		DamageClasses: {
+			LifestealDamage.DisplayName: Lifesteal Damage
+			HarvesterDamage.DisplayName: Harvester Damage
+		}
+
 		InfoDisplays.HealinfoDisplayEffect.DisplayName: Healinfo Display Effect
 
 		Items: {
@@ -297,6 +301,16 @@ Mods: {
 
 			TinSickle: {
 				DisplayName: Tin Sickle
+				Tooltip: ""
+			}
+
+			SilverScythe: {
+				DisplayName: Silver Scythe
+				Tooltip: ""
+			}
+
+			TungstenScythe: {
+				DisplayName: Tungsten Scythe
 				Tooltip: ""
 			}
 		}

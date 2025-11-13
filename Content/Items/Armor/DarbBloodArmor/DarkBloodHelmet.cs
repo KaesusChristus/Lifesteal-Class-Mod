@@ -33,8 +33,8 @@ namespace LifeStealClass.Content.Items.Armor.DarbBloodArmor
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(ModContent.GetInstance<LifestealDamage>()) += CritStrikeChance;
-            player.GetDamage(ModContent.GetInstance<LifestealDamage>()) += damageBoost;
+            player.GetCritChance(ModContent.GetInstance<HarvesterDamage>()) += CritStrikeChance;
+            player.GetDamage(ModContent.GetInstance<HarvesterDamage>()) += damageBoost;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)

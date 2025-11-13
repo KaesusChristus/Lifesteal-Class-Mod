@@ -27,7 +27,7 @@ namespace LifeStealClass.Content.Items.Armor.ZomboidArmor
         public override void UpdateEquip(Player player)
         {
             player.statLifeMax2 += MaxLifeBoost;
-            player.GetDamage(ModContent.GetInstance<LifestealDamage>()) += damageBoost;
+            player.GetDamage(ModContent.GetInstance<HarvesterDamage>()) += damageBoost;
         }
 
         public override void AddRecipes()

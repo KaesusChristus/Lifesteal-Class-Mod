@@ -23,7 +23,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
 
         public override void OnHitNPC(Item item, Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (baseHealOnHit > 0 && item.DamageType == ModContent.GetInstance<LifestealDamage>())
+            if (baseHealOnHit > 0 && item.DamageType == ModContent.GetInstance<HarvesterDamage>())
             {
                 var modPlayer = player.GetModPlayer<LifestealEffectsPlayer>();
                 int totalHeal = baseHealOnHit + bonusHealOnHit;

@@ -12,7 +12,7 @@ namespace LifeStealClass.Common.GlobalProjectiles.VanillaProjectileModification
             // Überprüfe, ob das Projektil vom Bone Helm ist
             if (projectile.type == 964)
             {
-                projectile.DamageType = ModContent.GetInstance<LifestealDamage>();
+                projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
                 projectile.damage = +20;
                 projectile.CritChance = 100;
             }

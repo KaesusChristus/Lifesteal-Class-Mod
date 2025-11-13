@@ -9,7 +9,7 @@ namespace LifeStealClass.Content.Core
     {
         public override void SetDefaults()
         {
-            Item.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -22,12 +22,12 @@ namespace LifeStealClass.Content.Core
         }
     }
 
-    public class LifestealDamage : DamageClass
+    public class HarvesterDamage : DamageClass
     {
         public override void SetDefaultStats(Player player)
         {
-            player.GetCritChance<LifestealDamage>() = 2;
-            player.GetArmorPenetration<LifestealDamage>() += 10;
+            player.GetCritChance<HarvesterDamage>() = 2;
+            player.GetArmorPenetration<HarvesterDamage>() += 10;
         }
     }
 }

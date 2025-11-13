@@ -33,7 +33,7 @@ namespace LifeStealClass.Content
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (hasToothOfCthulhuEquipped && projectileSpawned == false && hit.DamageType == ModContent.GetInstance<LifestealDamage>())
+            if (hasToothOfCthulhuEquipped && projectileSpawned == false && hit.DamageType == ModContent.GetInstance<HarvesterDamage>())
             {
                 Random random = new Random();
 

@@ -45,7 +45,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
                 Vector2 velocity = (direction * speed) * -0.75f;
 
                 Projectile proj = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), spawnPos, velocity, ProjectileID.LightsBane, Projectile.damage / 2, Projectile.knockBack, Projectile.owner, 1f);
-                proj.DamageType = ModContent.GetInstance<LifestealDamage>();
+                proj.DamageType = ModContent.GetInstance<HarvesterDamage>();
             }
         }
 
