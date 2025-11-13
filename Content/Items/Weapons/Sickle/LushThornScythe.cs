@@ -8,7 +8,7 @@ using LifeStealClass.Common.Utils;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
-    public class OvergrowthScythe : LifestealSickle
+    public class LushThornScythe : LifestealSickle
     {
         public override void SetDefaults()
         {

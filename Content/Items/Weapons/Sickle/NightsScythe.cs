@@ -53,7 +53,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Recipe recipe1 = CreateRecipe();
             recipe1.AddIngredient(ModContent.ItemType<ShadowsWisdom>());
             recipe1.AddIngredient(ModContent.ItemType<AquaScythe>());
-            recipe1.AddIngredient(ModContent.ItemType<OvergrowthScythe>());
+            recipe1.AddIngredient(ModContent.ItemType<LushThornScythe>());
             recipe1.AddIngredient(ModContent.ItemType<LavaSickle>());
             recipe1.AddTile(TileID.DemonAltar);
             recipe1.Register();
@@ -61,7 +61,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Recipe recipe2 = CreateRecipe();
             recipe2.AddIngredient(ModContent.ItemType<TheSlaughtersScythe>());
             recipe2.AddIngredient(ModContent.ItemType<AquaScythe>());
-            recipe2.AddIngredient(ModContent.ItemType<OvergrowthScythe>());
+            recipe2.AddIngredient(ModContent.ItemType<LushThornScythe>());
             recipe2.AddIngredient(ModContent.ItemType<LavaSickle>());
             recipe2.AddTile(TileID.DemonAltar);
             recipe2.Register();
