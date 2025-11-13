@@ -6,7 +6,11 @@ DamageClasses: {
 
 Mods: {
 	LifeStealClass: {
-		DamageClasses.LifestealDamage.DisplayName: Lifesteal Damage
+		DamageClasses: {
+			LifestealDamage.DisplayName: Lifesteal Damage
+			HarvesterDamage.DisplayName: Harvester Damage
+		}
+
 		InfoDisplays.HealinfoDisplayEffect.DisplayName: Healinfo Display Effect
 
 		Items: {

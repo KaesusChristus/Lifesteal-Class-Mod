@@ -21,7 +21,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Spears
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
-            Projectile.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
         }
 
         public override void SpawnDust()

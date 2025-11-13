@@ -25,7 +25,7 @@ namespace LifeStealClass.Common.ModPlayers.SetBoni
 
             foreach (var item in Player.inventory)
             {
-                if (!item.IsAir && item.DamageType == ModContent.GetInstance<LifestealDamage>())
+                if (!item.IsAir && item.DamageType == ModContent.GetInstance<HarvesterDamage>())
                 {
                     var healData = item.GetGlobalItem<OnHitHeal>();
 

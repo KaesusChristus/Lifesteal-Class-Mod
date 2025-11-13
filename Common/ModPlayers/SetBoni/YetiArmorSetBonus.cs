@@ -50,7 +50,7 @@ namespace LifeStealClass.Common.ModPlayers.SetBoni
                 Vector2 spawnPosition = Player.position;
                 healDone = Player.GetModPlayer<LifestealEffectsPlayer>().GetHealAmountPerSecond();
 
-                if (healDone > 0 && hit.DamageType == ModContent.GetInstance<LifestealDamage>() && hit.Crit)
+                if (healDone > 0 && hit.DamageType == ModContent.GetInstance<HarvesterDamage>() && hit.Crit)
                 {
                     Projectile.NewProjectile(source, spawnPosition, Vector2.Zero, ProjectileID.SpectreWrath, healDone * 2, 0, Main.myPlayer, 12f);
                 }

@@ -19,7 +19,7 @@ namespace LifeStealClass.Content.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetCritChance(ModContent.GetInstance<LifestealDamage>()) += 4; // 4%
+            player.GetCritChance(ModContent.GetInstance<HarvesterDamage>()) += 4; // 4%
             player.GetModPlayer<ToothOfCthulhuEffect>().hasToothOfCthulhuEquipped = true;
         }
     }

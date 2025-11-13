@@ -29,7 +29,7 @@ namespace LifeStealClass.Common.GlobalItems.VanillaItemModification
         public static void LifeStealToolTip(List<TooltipLine> tooltips, Mod mod)
         {
             // Tooltip hinzufügen, dass es ein Lifesteal-Item ist
-            tooltips.Add(new TooltipLine(mod, "LifestealItem", "This item belongs now to the Lifesteal class")
+            tooltips.Add(new TooltipLine(mod, "HarvesterItem", "This item belongs now to the Harvester class")
             {
                 OverrideColor = new Color(180, 0, 0)
             });

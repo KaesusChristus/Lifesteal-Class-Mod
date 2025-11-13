@@ -16,7 +16,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             // Item.value = Item.sellPrice(0, 0, 70);
 
             // Item.damage = 30;
-            Item.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.knockBack = 4f;
 
             Item.useTime = 30;

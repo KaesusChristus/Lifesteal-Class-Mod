@@ -41,9 +41,9 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Vector2 velocity = new Vector2(direction, 0f);
 
             Projectile proj1 = Projectile.NewProjectileDirect(Item.GetSource_FromThis(), spawnPos, velocity, ProjectileID.NightsEdge, Item.damage / 2, Item.knockBack, player.whoAmI, direction, 25f, 1.2f);
-            proj1.DamageType = ModContent.GetInstance<LifestealDamage>();
+            proj1.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Projectile proj2 = Projectile.NewProjectileDirect(Item.GetSource_FromThis(), spawnPos, velocity, ProjectileID.NightsEdge, Item.damage / 2, Item.knockBack, player.whoAmI, direction * 0.1f, 30f, 1.3f);
-            proj2.DamageType = ModContent.GetInstance<LifestealDamage>();
+            proj2.DamageType = ModContent.GetInstance<HarvesterDamage>();
 
             return true;
         }

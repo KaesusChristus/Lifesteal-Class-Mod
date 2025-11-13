@@ -29,7 +29,7 @@ namespace LifeStealClass.Content.Items.Weapons.FractaliteStaffs
 
             Item.crit = 27;
 
-            Item.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.damage = 17;
             Item.knockBack = 3f;
 

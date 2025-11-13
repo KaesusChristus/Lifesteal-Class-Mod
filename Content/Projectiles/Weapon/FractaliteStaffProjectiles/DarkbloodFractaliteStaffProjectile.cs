@@ -22,7 +22,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.FractaliteStaffProjectiles
             Projectile.friendly = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = -1;
-            Projectile.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Projectile.timeLeft = 300;
             Projectile.velocity *= 30f;
             Projectile.ArmorPenetration = 8;

@@ -40,7 +40,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Vector2 spawnPos = target.Center + direction * offset;
 
             Projectile proj = Projectile.NewProjectileDirect(target.GetSource_FromThis(), spawnPos, velocity, ProjectileID.Muramasa, Item.damage / 4, 3f, Main.myPlayer);
-            proj.DamageType = ModContent.GetInstance<LifestealDamage>();
+            proj.DamageType = ModContent.GetInstance<HarvesterDamage>();
             proj.penetrate = -1;
         }
     }

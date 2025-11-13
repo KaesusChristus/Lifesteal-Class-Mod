@@ -26,7 +26,7 @@ namespace LifeStealClass.Content.Items.Armor.YetiArmor
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(ModContent.GetInstance<LifestealDamage>()) += CritStrikeChance;
+            player.GetCritChance(ModContent.GetInstance<HarvesterDamage>()) += CritStrikeChance;
             player.moveSpeed += movementSpeed;
         }
 

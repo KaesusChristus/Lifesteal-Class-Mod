@@ -27,7 +27,7 @@ namespace LifeStealClass.Content.Items.Weapons.Spears
             Item.useTime = 20;
             Item.crit = 20;
 
-            Item.DamageType = ModContent.GetInstance<LifestealDamage>();
+            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.damage = 25;
             Item.knockBack = 3f;
 
