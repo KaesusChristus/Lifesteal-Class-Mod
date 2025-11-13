@@ -303,6 +303,16 @@ Mods: {
 				DisplayName: Tin Sickle
 				Tooltip: ""
 			}
+
+			SilverScythe: {
+				DisplayName: Silver Scythe
+				Tooltip: ""
+			}
+
+			TungstenScythe: {
+				DisplayName: Tungsten Scythe
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {

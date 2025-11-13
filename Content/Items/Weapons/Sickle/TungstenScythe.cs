@@ -1,0 +1,35 @@
+﻿using Terraria;
+using Terraria.ModLoader;
+using Terraria.ID;
+using LifeStealClass.Content.Items.Ingredients;
+
+namespace LifeStealClass.Content.Items.Weapons.Sickle
+{
+    public class TungstenScythe : LifestealSickle
+    {
+        public override void SetDefaults()
+        {
+            base.SetDefaults();
+
+            Item.width = 42;
+            Item.height = 32;
+            Item.scale = 1.4f;
+
+            Item.value = Item.sellPrice(0, 0, 90);
+
+            Item.damage = 15;
+
+            Item.useTime = 35;
+            Item.useAnimation = 35;
+        }
+
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.TungstenBar, 10);
+            recipe.AddIngredient(ModContent.ItemType<LifeShard>(), 3);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe = CreateRecipe();
+        }
+    }
+}
