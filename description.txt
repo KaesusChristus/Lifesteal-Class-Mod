@@ -3,7 +3,6 @@ Harvester Class - Alpha Version v0.2
 Welcome to the Harvester Class Mod – a custom damage class focused on sickles, scythes, and War Scythes.
 This mod introduces only the new damage class, so you can easily add it to a vanilla-like playthrough without major changes.
 
-
 Core Features:
 
 Harvester Weapons – Mostly sickles and scythes that heal you on true melee hits. Most of them also have unique effects, special projectiles, or other abilities.
