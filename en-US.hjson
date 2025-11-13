@@ -313,6 +313,11 @@ Mods: {
 				DisplayName: Tungsten Scythe
 				Tooltip: ""
 			}
+
+			LushThornScythe: {
+				DisplayName: Lush Thorn Scythe
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {
