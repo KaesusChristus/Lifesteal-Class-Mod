@@ -17,11 +17,6 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
             Projectile.width = 64;
             Projectile.height = 64;
 
-            Projectile.aiStyle = 19; // Spear aiStyle
-            Projectile.friendly = true;
-            Projectile.tileCollide = false;
-            Projectile.penetrate = -1;
-            Projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
         }
 
         public override void SpawnDust()
