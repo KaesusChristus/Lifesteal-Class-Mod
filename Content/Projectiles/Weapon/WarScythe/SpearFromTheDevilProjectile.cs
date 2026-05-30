@@ -5,12 +5,12 @@ using Microsoft.Xna.Framework;
 using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Content.Core;
 
-namespace LifeStealClass.Content.Projectiles.Weapon.Spears
+namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 {
-    public class DarkHalberdProjectile : BaseSpearProjectile
+    public class SpearFromTheDevilProjectile : BaseSpearProjectile
     {
-        public override float HoldoutRangeMin => 40f; // Spitze
-        public override float HoldoutRangeMax => 160f; // Ende
+        public override float HoldoutRangeMin => 50f; // Spitze
+        public override float HoldoutRangeMax => 220; // Ende
 
         public override void SetDefaults()
         {
@@ -27,26 +27,25 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Spears
         public override void SpawnDust()
         {
             // Dust Effect
-            if (Main.rand.NextBool(3))
+            if (Main.rand.NextBool(2))
             {
-                Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Blood, Projectile.velocity.X * 2f, Projectile.velocity.Y * 2f, Alpha: 128, Scale: 1.2f);
-            }
-
-            if (Main.rand.NextBool(4))
-            {
-                Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Blood, Alpha: 128, Scale: 0.3f);
+                for (int i = 0; i < 3; i++)
+                {
+                    Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, Projectile.velocity.X * 2f, Projectile.velocity.Y * 2f, Alpha: 128, Scale: 1.2f);
+                    Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, Alpha: 128, Scale: 0.3f);
+                }
             }
         }
 
-
-        // Heal the player, if the target dies
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            target.AddBuff(BuffID.ShadowFlame, 180);
+
             if (target.life <= 0 && target.lifeMax > 5)
             {
                 Player localPlayer = Main.LocalPlayer;
 
-                localPlayer.GetModPlayer<LifestealEffectsPlayer>().SetHealAmount(4);
+                localPlayer.GetModPlayer<LifestealEffectsPlayer>().SetHealAmount(8);
             }
         }
     }

@@ -1,14 +1,14 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Content.Projectiles.Weapon.Spears;
+using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
 using LifeStealClass.Content.Core;
 using LifeStealClass.Common.GlobalItems.Other;
 using LifeStealClass.Content.Items.Ingredients;
 
-namespace LifeStealClass.Content.Items.Weapons.Spears
+namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public class SpearFromTheDevil : LifestealSpearWeapon, IDashWeapon
+    public class SpearFromTheDevil : LifestealWarScytheWeapon, IDashWeapon
     {
         public new float DashSpeed => 23f;
         public new int DashDuration => 9;

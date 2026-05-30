@@ -6,9 +6,9 @@ using Microsoft.Xna.Framework;
 using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Common.GlobalItems.Other;
 
-namespace LifeStealClass.Content.Items.Weapons.Spears
+namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public abstract class LifestealSpearWeapon : LifeStealItem, IDashWeapon
+    public abstract class LifestealWarScytheWeapon : LifeStealItem, IDashWeapon
     {
         public float DashSpeed => 12f; // Base DashSpeed
         public int DashDuration => 8; // Base BashDuration
