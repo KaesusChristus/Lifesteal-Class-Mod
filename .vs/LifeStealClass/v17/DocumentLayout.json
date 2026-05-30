@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\ui\\itemslotuielement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\ui\\itemslotuielement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\sickle\\nightsscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\nightsscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ItemSlotUIElement.cs",
-              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\UI\\ItemSlotUIElement.cs",
-              "RelativeDocumentMoniker": "Common\\UI\\ItemSlotUIElement.cs",
-              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\UI\\ItemSlotUIElement.cs",
-              "RelativeToolTip": "Common\\UI\\ItemSlotUIElement.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAAAIkAAAACAAAAAAAAAA==",
+              "Title": "NightsScytheProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\NightsScytheProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:53:38.822Z",
+              "WhenOpened": "2025-11-21T20:45:13.043Z",
               "EditorCaption": ""
             }
           ]
