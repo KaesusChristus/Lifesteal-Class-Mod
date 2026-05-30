@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Content.Items.Weapons.Spears;
+using LifeStealClass.Content.Items.Weapons.WarScythe;
 using Terraria.Utilities;
 
 namespace LifeStealClass.Common.GlobalItems.Other
@@ -10,7 +10,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
     {
         public override bool AllowPrefix(Item item, int pre)
         {
-            if (item.ModItem is LifestealSpearWeapon)
+            if (item.ModItem is LifestealWarScytheWeapon)
             {
                 return true;
             }
@@ -19,7 +19,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
 
         public override int ChoosePrefix(Item item, UnifiedRandom rand)
         {
-            if (item.ModItem is LifestealSpearWeapon)
+            if (item.ModItem is LifestealWarScytheWeapon)
             {
                 int[] possiblePrefixes = new int[]
                 {

@@ -2,12 +2,13 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Placeable;
-using LifeStealClass.Content.Projectiles.Weapon.Spears;
+using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
 using LifeStealClass.Content.Core;
 using LifeStealClass.Common.GlobalItems.Other;
-namespace LifeStealClass.Content.Items.Weapons.Spears
+
+namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public class DarkHalberd : LifestealSpearWeapon, IDashWeapon
+    public class DarkHalberd : LifestealWarScytheWeapon, IDashWeapon
     {
         public new float DashSpeed => 20f;
         public new int DashDuration => 8;

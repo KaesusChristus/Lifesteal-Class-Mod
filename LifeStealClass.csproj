@@ -8,8 +8,8 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Remove="Content\Items\Weapons\Spears\PulseLance.png" />
-	  <None Remove="Content\Projectiles\Weapon\Spears\PulseLanceProjectile.png" />
+	  <None Remove="Content\Items\Weapons\WarScythe\PulseLance.png" />
+	  <None Remove="Content\Projectiles\Weapon\WarScythe\PulseLanceProjectile.png" />
 	</ItemGroup>
 
 	<!-- References -->
