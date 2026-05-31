@@ -5,7 +5,6 @@ using Terraria.ID;
 using LifeStealClass.Common.ModPlayers;
 using Microsoft.Xna.Framework;
 using System;
-using LifeStealClass.Content.Core;
 
 namespace LifeStealClass.Common.GlobalItems.Other
 {

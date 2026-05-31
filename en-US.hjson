@@ -318,6 +318,11 @@ Mods: {
 				DisplayName: Lush Thorn Scythe
 				Tooltip: ""
 			}
+
+			MandibleStriker: {
+				DisplayName: Mandible Striker
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {
@@ -353,6 +358,7 @@ Mods: {
 			TheSlaughtersScytheProjectile.DisplayName: The Slaughters Scythe Projectile
 			DarkHalberdProjectile.DisplayName: Dark Halberd Projectile
 			SpearFromTheDevilProjectile.DisplayName: Spear From The Devil Projectile
+			MandibleStrikerProjectile.DisplayName: Mandible Striker Projectile
 		}
 
 		Buffs: {

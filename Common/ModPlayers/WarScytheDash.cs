@@ -14,6 +14,8 @@ namespace LifeStealClass.Common.ModPlayers
         private int dashCooldownTimer;
         private Vector2 dashVelocity;
 
+        public bool IsDashing => dashTimer > 0;
+
         private int? activeSpearProjType;
         private float activeSpearSpeed;
 
