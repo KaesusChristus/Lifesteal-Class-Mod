@@ -1,21 +1,25 @@
-﻿using LifeStealClass.Common.GlobalItems.Other;
-using LifeStealClass.Content.Core;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using LifeStealClass.Content.Core;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public abstract class LifestealSickle : LifeStealItem
     {
+        public int attackType = 0;
+        public int comboExpireTimer = 0;
+
+        protected virtual int ComboResetTime => 120;
+
         public override void SetDefaults()
         {
             Item.width = 64;
             Item.height = 64;
-
             Item.rare = ItemRarityID.Blue;
-            // Item.value = Item.sellPrice(0, 0, 70);
 
-            // Item.damage = 30;
             Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.knockBack = 4f;
 
@@ -25,13 +29,26 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item71;
             Item.autoReuse = true;
-
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 1;
         }
 
-        public override bool MeleePrefix()
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,
+            Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            return true; // Makes the Sickle receive melee modifiers
+            Projectile.NewProjectile(source, position, velocity, type, damage, knockback,
+                Main.myPlayer, attackType);
+
+            attackType = (attackType + 1) % 2;
+            comboExpireTimer = 0;
+
+            return false;
         }
+
+        public override void UpdateInventory(Player player)
+        {
+            if (comboExpireTimer++ >= ComboResetTime)
+                attackType = 0;
+        }
+
+        public override bool MeleePrefix() => true;
     }
 }

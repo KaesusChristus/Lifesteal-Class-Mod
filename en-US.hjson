@@ -359,6 +359,7 @@ Mods: {
 			DarkHalberdProjectile.DisplayName: Dark Halberd Projectile
 			SpearFromTheDevilProjectile.DisplayName: Spear From The Devil Projectile
 			MandibleStrikerProjectile.DisplayName: Mandible Striker Projectile
+			TungstenScytheProjectile.DisplayName: Tungsten Scythe Projectile
 		}
 
 		Buffs: {

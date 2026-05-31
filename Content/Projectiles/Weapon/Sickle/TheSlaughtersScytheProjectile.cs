@@ -54,7 +54,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             }
         }
 
-        public override Color GetGlowColor()
+        public Color GetGlowColor()
         {
             return new Color(255, 40, 40);
         }

@@ -29,7 +29,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             }
         }
         
-        public override Color GetGlowColor()
+        public Color GetGlowColor()
         {
             return new Color(100, 180, 255); // hellblau, geisterhaft
         }
