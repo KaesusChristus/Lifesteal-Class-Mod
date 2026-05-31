@@ -32,7 +32,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             recipe.AddIngredient(ItemID.TinBar, 8);
             recipe.AddIngredient(ModContent.ItemType<LifeShard>(), 2);
             recipe.AddTile(TileID.WorkBenches);
-            recipe = CreateRecipe();
+            recipe.Register();
         }
     }
 }
