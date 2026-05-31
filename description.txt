@@ -54,13 +54,6 @@ Damage and healing values may be unbalanced right now.
 I’d love any kind of feedback, bug reports, or suggestions from players trying out this alpha version!
 
 
-Contact & Feedback
-
-If you're interested in helping or want to give feedback, feel free to reach out to me:
-E-Mail: rizzo72yt@gmail.com
-I'll take note of everything you send as feedback and use it to improve the mod!
-
-
 Final Note
 
 This mod is just getting started — but the core mechanics are working, and I’d love to see what the community thinks.

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LifeStealClass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bd6b6f33ae30fa868ba4f0947b48fe9933d75c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e637ba4548ec4e269fb887ee51c6addf81fe2bf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("LifeStealClass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LifeStealClass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

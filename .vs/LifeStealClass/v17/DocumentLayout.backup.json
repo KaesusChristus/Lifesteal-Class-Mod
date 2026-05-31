@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\warscythe\\mandiblestrikerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\warscythe\\mandiblestrikerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\globalitems\\effects\\lifestealeffectsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\globalitems\\effects\\lifestealeffectsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\modplayers\\warscythedash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\modplayers\\warscythedash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\globalprojectiles\\lifestealeffectsprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\globalprojectiles\\lifestealeffectsprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\warscythe\\darkhalberdprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\warscythe\\darkhalberdprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\warscythe\\mandiblestriker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\warscythe\\mandiblestriker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\common\\utils\\lifestealhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:common\\utils\\lifestealhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DarkHalberdProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\WarScythe\\DarkHalberdProjectile.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\WarScythe\\DarkHalberdProjectile.cs",
-              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\WarScythe\\DarkHalberdProjectile.cs",
-              "RelativeToolTip": "Content\\Projectiles\\Weapon\\WarScythe\\DarkHalberdProjectile.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:15:18.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WarScytheDash.cs",
-              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\ModPlayers\\WarScytheDash.cs",
-              "RelativeDocumentMoniker": "Common\\ModPlayers\\WarScytheDash.cs",
-              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\ModPlayers\\WarScytheDash.cs",
-              "RelativeToolTip": "Common\\ModPlayers\\WarScytheDash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Title": "LifestealEffectsProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\GlobalProjectiles\\LifestealEffectsProjectile.cs",
+              "RelativeDocumentMoniker": "Common\\GlobalProjectiles\\LifestealEffectsProjectile.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\GlobalProjectiles\\LifestealEffectsProjectile.cs",
+              "RelativeToolTip": "Common\\GlobalProjectiles\\LifestealEffectsProjectile.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:12:53.906Z",
+              "WhenOpened": "2026-05-31T09:25:35.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MandibleStrikerProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\WarScythe\\MandibleStrikerProjectile.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\WarScythe\\MandibleStrikerProjectile.cs",
-              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\WarScythe\\MandibleStrikerProjectile.cs",
-              "RelativeToolTip": "Content\\Projectiles\\Weapon\\WarScythe\\MandibleStrikerProjectile.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Title": "LifestealEffectsItem.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\GlobalItems\\Effects\\LifestealEffectsItem.cs",
+              "RelativeDocumentMoniker": "Common\\GlobalItems\\Effects\\LifestealEffectsItem.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\GlobalItems\\Effects\\LifestealEffectsItem.cs",
+              "RelativeToolTip": "Common\\GlobalItems\\Effects\\LifestealEffectsItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:04:17.941Z",
+              "WhenOpened": "2026-05-31T09:25:23.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MandibleStriker.cs",
-              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\WarScythe\\MandibleStriker.cs",
-              "RelativeDocumentMoniker": "Content\\Items\\Weapons\\WarScythe\\MandibleStriker.cs",
-              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\WarScythe\\MandibleStriker.cs",
-              "RelativeToolTip": "Content\\Items\\Weapons\\WarScythe\\MandibleStriker.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwBYAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "LifestealHelper.cs",
+              "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\Utils\\LifestealHelper.cs",
+              "RelativeDocumentMoniker": "Common\\Utils\\LifestealHelper.cs",
+              "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Common\\Utils\\LifestealHelper.cs",
+              "RelativeToolTip": "Common\\Utils\\LifestealHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T08:59:10.8Z",
+              "WhenOpened": "2026-05-31T09:24:42.679Z",
               "EditorCaption": ""
             }
           ]

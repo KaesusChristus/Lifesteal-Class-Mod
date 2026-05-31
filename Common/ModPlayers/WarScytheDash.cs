@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.Audio;
 using System;
 using LifeStealClass.Common.GlobalItems.Other;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace LifeStealClass.Common.ModPlayers
 {
@@ -19,21 +20,26 @@ namespace LifeStealClass.Common.ModPlayers
         private int? activeSpearProjType;
         private float activeSpearSpeed;
 
-
         private int dashDamageBonus;
         private int dashCritBonus;
 
         private int lastDashCooldown = 0;
+        private int maxDashCooldown;
+
+        public int DashCooldownRemaining => dashCooldownTimer;
+        public int MaxDashCooldown => maxDashCooldown;
 
         public void TryDash(Vector2 direction, Item item, int? spearProjectileType = null, float spearSpeed = 0f)
         {
             if (dashCooldownTimer > 0 || dashTimer > 0)
                 return;
 
-            if (!(item.ModItem is IDashWeapon dashItem)) return; // nur DashWeapons
+            if (!(item.ModItem is IDashWeapon dashItem))
+                return;
 
-            // 🔹 DashHealthCost prüfen
+            // 🔹 Health Cost
             int dashCost = item.GetGlobalItem<HealthCost>().dashHealthCost;
+
             if (dashCost > 0)
             {
                 int reduction = 0;
@@ -41,8 +47,12 @@ namespace LifeStealClass.Common.ModPlayers
                     reduction = modPlayer.reduceLifecostFlat;
 
                 int adjustedCost = Math.Max(0, dashCost - reduction);
-                if (Player.statLife <= adjustedCost) return; // nicht genug HP
+
+                if (Player.statLife <= adjustedCost)
+                    return;
+
                 Player.statLife -= adjustedCost;
+
                 if (Main.netMode != NetmodeID.Server)
                     CombatText.NewText(Player.getRect(), Color.Red, $"-{adjustedCost}");
             }
@@ -50,27 +60,30 @@ namespace LifeStealClass.Common.ModPlayers
             // 🔹 Dash starten
             dashVelocity = direction.SafeNormalize(Vector2.Zero) * dashItem.DashSpeed;
             dashTimer = dashItem.DashDuration;
+
             dashCooldownTimer = dashItem.DashCooldown;
+            maxDashCooldown = dashItem.DashCooldown;
 
             activeSpearProjType = spearProjectileType;
             activeSpearSpeed = spearSpeed;
 
-            SoundEngine.PlaySound(SoundID.Item9, Player.position);
-
-            // Bonuswerte merken
             dashDamageBonus = dashItem.DashDamageBonus;
             dashCritBonus = dashItem.DashCritBonus;
 
-            // Visual Dash-Effekte
+            SoundEngine.PlaySound(SoundID.Item9, Player.position);
+
             for (int i = 0; i < 10; i++)
+            {
                 Dust.NewDust(Player.position, Player.width, Player.height, DustID.Smoke,
                     dashVelocity.X * 0.2f, dashVelocity.Y * 0.2f);
+            }
 
-            // Projektil spawn, falls vorhanden
+            // 🔹 Spear projectile
             if (Main.myPlayer == Player.whoAmI && activeSpearProjType.HasValue)
             {
                 int projType = activeSpearProjType.Value;
                 float speed = activeSpearSpeed;
+
                 Vector2 velocity = dashVelocity.SafeNormalize(Vector2.Zero) * speed;
 
                 var source = Player.HeldItem?.IsAir == false
@@ -120,7 +133,6 @@ namespace LifeStealClass.Common.ModPlayers
                 if (dashTimer <= 0)
                 {
                     Player.velocity *= 0.5f;
-
                     Player.noKnockback = false;
                 }
             }
@@ -128,14 +140,12 @@ namespace LifeStealClass.Common.ModPlayers
 
         public override void PostUpdate()
         {
-            // Cooldown gerade abgelaufen
             if (lastDashCooldown > 0 && dashCooldownTimer == 0)
             {
-                CombatText.NewText(Player.getRect(), Color.LimeGreen, "Dash is Ready!");
+                CombatText.NewText(Player.getRect(), Color.LimeGreen, "Dash Ready!");
             }
 
             lastDashCooldown = dashCooldownTimer;
         }
-
     }
 }
