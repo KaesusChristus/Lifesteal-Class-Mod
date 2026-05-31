@@ -4,6 +4,7 @@ using Terraria.ID;
 using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
 using LifeStealClass.Content.Core;
 using LifeStealClass.Common.GlobalItems.Other;
+using LifeStealClass.Content.Items.Ingredients;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
@@ -42,11 +43,12 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
 
         public override void AddRecipes()
         {
-            Recipe recipe1 = CreateRecipe();
-            recipe1.AddIngredient(ItemID.AntlionMandible, 2);
-            recipe1.AddIngredient(ItemID.PalmWood, 25);
-            recipe1.AddTile(TileID.WorkBenches);
-            recipe1.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.AntlionMandible, 2);
+            recipe.AddIngredient(ModContent.ItemType<LifeShard>(), 1);
+            recipe.AddIngredient(ItemID.PalmWood, 25);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.Register();
         }
     }
 }
