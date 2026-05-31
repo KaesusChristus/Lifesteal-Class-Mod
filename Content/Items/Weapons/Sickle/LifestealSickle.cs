@@ -29,6 +29,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item71;
             Item.autoReuse = true;
+            Item.noUseGraphic = true;
+            Item.noMelee = true;
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,

@@ -2,6 +2,8 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Ingredients;
+using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using LifeStealClass.Common.GlobalItems.Other;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
@@ -21,6 +23,10 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 
             Item.useTime = 35;
             Item.useAnimation = 35;
+            Item.shoot = ModContent.ProjectileType<SilverScytheProjectile>();
+            Item.shootSpeed = 7f;
+
+            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 1;
         }
 
         public override void AddRecipes()

@@ -1,18 +1,18 @@
-﻿using Terraria;
+﻿
 using Microsoft.Xna.Framework;
 using System;
 
 namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
-    public class SlimeSickleProjectile : LifestealSickleProjectile
+    public class TinSickleProjectile : LifestealSickleProjectile
     {
-        public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/SlimeSickle";
+        public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/TinSickle";
 
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Projectile.width = 64;
-            Projectile.height = 64;
+            Projectile.width = 42;
+            Projectile.height = 42;
         }
 
         public override SickleStats GetStats()
@@ -20,14 +20,14 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             return new SickleStats
             {
                 SWINGRANGE = 2.0f * MathF.PI,
-                SPINRANGE = 3.0f * MathF.PI,
+                SPINRANGE = 3.5f * MathF.PI,
 
-                WINDUP = 0.3f,
+                WINDUP = 0.4f,
                 UNWIND = 0.55f,
                 SPINTIME = 2.0f,
 
                 PrepTime = 16f,
-                ExecTime = 12f,
+                ExecTime = 17f,
                 HideTime = 14f,
 
                 scale = 1.1f,
@@ -36,11 +36,6 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
                 rotationOffsetRight = MathHelper.ToRadians(45f),
                 rotationOffsetLeft = MathHelper.ToRadians(135f)
             };
-        }
-
-        public Color GetGlowColor()
-        {
-            return new Color(100, 180, 255); // hellblau, geisterhaft
         }
     }
 }

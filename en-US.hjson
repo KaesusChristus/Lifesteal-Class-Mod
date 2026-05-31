@@ -360,6 +360,13 @@ Mods: {
 			SpearFromTheDevilProjectile.DisplayName: Spear From The Devil Projectile
 			MandibleStrikerProjectile.DisplayName: Mandible Striker Projectile
 			TungstenScytheProjectile.DisplayName: Tungsten Scythe Projectile
+			CopperSickleProjectile.DisplayName: Copper Sickle Projectile
+			TinSickleProjectile.DisplayName: Tin Sickle Projectile
+			IronSickleProjectile.DisplayName: Iron Sickle Projectile
+			LeadSickleProjectile.DisplayName: Lead Sickle Projectile
+			SilverScytheProjectile.DisplayName: Silver Scythe Projectile
+			GoldScytheProjectile.DisplayName: Gold Scythe Projectile
+			PlatinumScytheProjectile.DisplayName: Platinum Scythe Projectile
 		}
 
 		Buffs: {

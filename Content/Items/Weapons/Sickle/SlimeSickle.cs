@@ -1,4 +1,4 @@
-﻿using LifeStealClass.Common.Utils;
+﻿using LifeStealClass.Common.GlobalItems.Other;
 using LifeStealClass.Content.Projectiles.Weapon.Sickle;
 using Terraria;
 using Terraria.ModLoader;
@@ -21,7 +21,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.shoot = ModContent.ProjectileType<SlimeSickleProjectile>();
             Item.shootSpeed = 7f;
 
-            //Item.useStyle = CustomUseStyleID.SickleUseStyle;
+            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
         }
     }
 }

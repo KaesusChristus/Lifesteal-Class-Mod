@@ -1,4 +1,5 @@
-﻿using LifeStealClass.Content.Items.Ingredients;
+﻿using LifeStealClass.Common.GlobalItems.Other;
+using LifeStealClass.Content.Items.Ingredients;
 using LifeStealClass.Content.Projectiles.Weapon.Sickle;
 using Terraria;
 using Terraria.ID;
@@ -26,6 +27,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 
             Item.shoot = ModContent.ProjectileType<ShadowsWisdomProjectile>();
             Item.shootSpeed = 7f;
+
+            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 3;
         }
 
         public override void AddRecipes()

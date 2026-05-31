@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Ingredients;
+using LifeStealClass.Content.Projectiles.Weapon.Sickle;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
@@ -21,6 +22,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 
             Item.useTime = 40;
             Item.useAnimation = 40;
+            Item.shoot = ModContent.ProjectileType<TinSickleProjectile>();
+            Item.shootSpeed = 7f;
         }
 
         public override void AddRecipes()

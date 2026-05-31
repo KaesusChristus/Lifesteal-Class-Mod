@@ -4,6 +4,7 @@ using Terraria.Audio;
 using Microsoft.Xna.Framework;
 using LifeStealClass.Content.Core;
 using Terraria.ModLoader;
+using System;
 
 namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
@@ -15,12 +16,37 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             base.SetDefaults();
 
-            Projectile.width = 54;
-            Projectile.height = 44;
+            Projectile.width = 48;
+            Projectile.height = 38;
             Projectile.scale = 1.2f;
 
             Projectile.timeLeft = 50;
         }
+
+        public override SickleStats GetStats()
+        {
+            return new SickleStats
+            {
+                SWINGRANGE = 1.67f * MathF.PI,
+                SPINRANGE = 3.5f * MathF.PI,
+
+                WINDUP = 0.15f,
+                UNWIND = 0.4f,
+                SPINTIME = 2.5f,
+
+                PrepTime = 12f,
+                ExecTime = 8f,
+                HideTime = 12f,
+
+                scale = 1.35f,
+                hitboxWidth = 15f,
+
+                rotationOffsetRight = MathHelper.ToRadians(45f),
+                rotationOffsetLeft = MathHelper.ToRadians(135f)
+            };
+        }
+
+        /*
 
         public override void OnKill(int timeLeft)
         {
@@ -53,6 +79,8 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
                 proj.scale = 0.8f;
             }
         }
+
+        */
 
         public Color GetGlowColor()
         {

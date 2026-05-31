@@ -3,6 +3,8 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Ingredients;
 using Microsoft.Xna.Framework;
+using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using LifeStealClass.Common.GlobalItems.Other;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
@@ -20,6 +22,10 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.useTime = 40;
             Item.useAnimation = 40;
             Item.scale = 1.2f;
+            Item.shoot = ModContent.ProjectileType<PlatinumScytheProjectile>();
+            Item.shootSpeed = 7f;
+
+            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
         }
 
         public override void HoldItem(Player player)
