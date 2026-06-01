@@ -11,6 +11,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
     public class TheSlaughtersScytheProjectile : LifestealSickleProjectile
     {
         public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/TheSlaughtersScythe";
+        //private bool arrowSpawned = false;
 
         public override void SetDefaults()
         {
@@ -86,5 +87,36 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             return new Color(255, 40, 40);
         }
+
+        /*
+
+        EXAMPLE TO ACCESS A SPECIFIC ATTACKTYPE
+
+        public override void AI()
+        {
+            base.AI();
+
+            if (Timer == 0)
+                arrowSpawned = false;
+
+            if (CurrentAttack == AttackType.Spin && !arrowSpawned)
+            {
+                arrowSpawned = true;
+
+                Vector2 direction = (Main.MouseWorld - Owner.MountedCenter).SafeNormalize(Vector2.UnitX);
+
+                Projectile.NewProjectile(
+                    Projectile.GetSource_FromThis(),
+                    Owner.MountedCenter,
+                    direction * 12f,
+                    ProjectileID.WoodenArrowFriendly,
+                    Projectile.damage / 2,
+                    1f,
+                    Projectile.owner
+                );
+            }
+        }
+
+        */
     }
 }

@@ -323,6 +323,11 @@ Mods: {
 				DisplayName: Mandible Striker
 				Tooltip: ""
 			}
+
+			StarScythe: {
+				DisplayName: Star Scythe
+				Tooltip: ""
+			}
 		}
 
 		ItemSetBonus: {
@@ -367,6 +372,7 @@ Mods: {
 			SilverScytheProjectile.DisplayName: Silver Scythe Projectile
 			GoldScytheProjectile.DisplayName: Gold Scythe Projectile
 			PlatinumScytheProjectile.DisplayName: Platinum Scythe Projectile
+			StarScytheProjectile.DisplayName: Star Scythe Projectile
 		}
 
 		Buffs: {

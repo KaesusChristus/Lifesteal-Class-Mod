@@ -11,6 +11,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
     {
         public int attackType = 0;
         public int comboStep = 0;
+        public int lastAttackType = 0;
         public int comboExpireTimer = 0;
 
         protected virtual int ComboResetTime => 120;
@@ -38,10 +39,9 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
         {
             int attack;
 
-            // Combo-Logik:
             if (comboStep < 2)
             {
-                attack = 0; // Swing (zweimal)
+                attack = 0; // Swing
                 comboStep++;
             }
             else
@@ -50,8 +50,12 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
                 comboStep = 0;
             }
 
+            lastAttackType = attack;
+
             Projectile.NewProjectile(source, position, velocity, type, damage, knockback,
-                Main.myPlayer, attack);
+                Main.myPlayer,
+                attack,
+                comboStep);
 
             comboExpireTimer = 0;
 

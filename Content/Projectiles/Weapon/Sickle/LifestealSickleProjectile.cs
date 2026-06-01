@@ -14,18 +14,18 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
     public abstract class LifestealSickleProjectile : ModProjectile
     {
-        private const float FIRSTHALFSWING = 0.45f;
+        protected const float FIRSTHALFSWING = 0.45f;
 
-        private enum AttackType { Swing, Spin }
-        private enum AttackStage { Prepare, Execute, Unwind }
+        protected enum AttackType { Swing, Spin }
+        protected enum AttackStage { Prepare, Execute, Unwind }
 
-        private AttackType CurrentAttack
+        protected AttackType CurrentAttack
         {
             get => (AttackType)Projectile.ai[0];
             set => Projectile.ai[0] = (float)value;
         }
 
-        private AttackStage CurrentStage
+        protected AttackStage CurrentStage
         {
             get => (AttackStage)Projectile.localAI[0];
             set
@@ -35,12 +35,13 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             }
         }
 
-        private ref float InitialAngle => ref Projectile.ai[1];
-        private ref float Timer => ref Projectile.ai[2];
-        private ref float Progress => ref Projectile.localAI[1];
-        private ref float Size => ref Projectile.localAI[2];
+        protected ref float InitialAngle => ref Projectile.ai[1];
+        protected ref float Timer => ref Projectile.ai[2];
+        protected ref float Progress => ref Projectile.localAI[1];
+        protected ref float Size => ref Projectile.localAI[2];
+        protected ref float ComboStep => ref Projectile.ai[2];
 
-        private Player Owner => Main.player[Projectile.owner];
+        protected Player Owner => Main.player[Projectile.owner];
 
         // -------------------------------------------------
         // INDIVIDUELLE WAFFENWERTE
