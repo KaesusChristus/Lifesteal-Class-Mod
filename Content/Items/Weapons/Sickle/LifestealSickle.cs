@@ -10,6 +10,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
     public abstract class LifestealSickle : LifeStealItem
     {
         public int attackType = 0;
+        public int comboStep = 0;
         public int comboExpireTimer = 0;
 
         protected virtual int ComboResetTime => 120;
@@ -33,13 +34,25 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.noMelee = true;
         }
 
-        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,
-            Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            Projectile.NewProjectile(source, position, velocity, type, damage, knockback,
-                Main.myPlayer, attackType);
+            int attack;
 
-            attackType = (attackType + 1) % 2;
+            // Combo-Logik:
+            if (comboStep < 2)
+            {
+                attack = 0; // Swing (zweimal)
+                comboStep++;
+            }
+            else
+            {
+                attack = 1; // Spin
+                comboStep = 0;
+            }
+
+            Projectile.NewProjectile(source, position, velocity, type, damage, knockback,
+                Main.myPlayer, attack);
+
             comboExpireTimer = 0;
 
             return false;
@@ -48,7 +61,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
         public override void UpdateInventory(Player player)
         {
             if (comboExpireTimer++ >= ComboResetTime)
-                attackType = 0;
+                comboStep = 0;
         }
 
         public override bool MeleePrefix() => true;
