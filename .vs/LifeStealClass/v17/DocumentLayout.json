@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\sickle\\starscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\starscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\starscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\starscythe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\items\\weapons\\sickle\\lifestealsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\items\\weapons\\sickle\\lifestealsickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\sickle\\starscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|solutionrelative:content\\projectiles\\weapon\\sickle\\starscytheprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31623674-D84B-4EDC-8274-FCA5432D1616}|LifeStealClass.csproj|c:\\users\\john\\onedrive\\dokumente\\my games\\terraria\\tmodloader\\modsources\\lifestealclass\\content\\projectiles\\weapon\\sickle\\lifestealsickleprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,37 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StarScythe.cs",
               "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\StarScythe.cs",
               "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\StarScythe.cs",
               "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\StarScythe.cs",
               "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\StarScythe.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAADwvz4AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswD4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-01T19:57:38.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "StarScytheProjectile.cs",
               "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\StarScytheProjectile.cs",
               "RelativeDocumentMoniker": "Content\\Projectiles\\Weapon\\Sickle\\StarScytheProjectile.cs",
               "ToolTip": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Projectiles\\Weapon\\Sickle\\StarScytheProjectile.cs",
               "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\StarScytheProjectile.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAiwFMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvygAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-01T20:09:26.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LifestealSickle.cs",
               "DocumentMoniker": "C:\\Users\\John\\OneDrive\\Dokumente\\My Games\\Terraria\\tModLoader\\ModSources\\LifeStealClass\\Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
               "RelativeDocumentMoniker": "Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
@@ -64,8 +64,7 @@
               "RelativeToolTip": "Content\\Items\\Weapons\\Sickle\\LifestealSickle.cs",
               "ViewState": "AgIAACsAAAAAAAAAAADwvzsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T17:53:40.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T17:53:40.31Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "Content\\Projectiles\\Weapon\\Sickle\\LifestealSickleProjectile.cs",
               "ViewState": "AgIAANIAAAAAAAAAAAAmwDMBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T17:54:07.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T17:54:07.15Z"
             }
           ]
         }

@@ -38,7 +38,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
                 ExecTime = 8f,
                 HideTime = 12f,
 
-                scale = 1.6f,
+                scale = 1.4f,
                 hitboxWidth = 15f,
 
                 rotationOffsetRight = MathHelper.ToRadians(45f),
