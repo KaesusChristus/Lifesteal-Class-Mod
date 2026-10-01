@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace HarvesterClassMod.Common.Systems
+namespace LifeStealClass.Common.Systems
 {
     public class BossDownedSystem : ModSystem
     {

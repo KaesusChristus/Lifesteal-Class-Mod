@@ -1,4 +1,4 @@
-﻿using HarvesterClassMod.Common.ModPlayers;
+﻿using LifeStealClass.Common.ModPlayers;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
-using HarvesterClassMod.Content.Core;
-using HarvesterClassMod.Content.Items.Ingredients;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Items.Ingredients;
 
 
-namespace HarvesterClassMod.Content.Items.Accessories
+namespace LifeStealClass.Content.Items.Accessories
 {
     public class DarkManaSoul : LifeStealItem
     {

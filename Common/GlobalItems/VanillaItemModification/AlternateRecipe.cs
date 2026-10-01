@@ -1,9 +1,9 @@
-﻿using HarvesterClassMod.Content.Items.Ingredients;
+﻿using LifeStealClass.Content.Items.Ingredients;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HarvesterClassMod.Common.GlobalItems.VanillaItemModification
+namespace LifeStealClass.Common.GlobalItems.VanillaItemModification
 {
     public class AlternateRecipe : GlobalItem
     {

@@ -2,15 +2,15 @@
 using Terraria.ID;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Content.Core;
 using Terraria.ModLoader;
 using System;
 
-namespace HarvesterClassMod.Content.Projectiles.Weapon.Sickle
+namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
     public class StarScytheProjectile : LifestealSickleProjectile
     {
-        public override string Texture => "HarvesterClassMod/Content/Items/Weapons/Sickle/StarScythe";
+        public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/StarScythe";
 
         public override void SetDefaults()
         {

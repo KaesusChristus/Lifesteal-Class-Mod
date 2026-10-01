@@ -1,9 +1,9 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Content.Core;
 
-namespace HarvesterClassMod.Common.GlobalProjectiles.VanillaProjectileModification
+namespace LifeStealClass.Common.GlobalProjectiles.VanillaProjectileModification
 {
     public class BoneHelmProjectile : GlobalProjectile
     {

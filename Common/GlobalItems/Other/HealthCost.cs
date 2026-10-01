@@ -2,11 +2,11 @@
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using Terraria.ID;
-using HarvesterClassMod.Common.ModPlayers;
+using LifeStealClass.Common.ModPlayers;
 using Microsoft.Xna.Framework;
 using System;
 
-namespace HarvesterClassMod.Common.GlobalItems.Other
+namespace LifeStealClass.Common.GlobalItems.Other
 {
     public class HealthCost : GlobalItem
     {

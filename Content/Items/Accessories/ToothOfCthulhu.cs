@@ -1,9 +1,9 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Content.Core;
 
-namespace HarvesterClassMod.Content.Items.Accessories
+namespace LifeStealClass.Content.Items.Accessories
 {
     public class ToothOfCthulhu : LifeStealItem
     {

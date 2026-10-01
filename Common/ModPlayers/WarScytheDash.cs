@@ -4,10 +4,10 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Audio;
 using System;
-using HarvesterClassMod.Common.GlobalItems.Other;
+using LifeStealClass.Common.GlobalItems.Other;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace HarvesterClassMod.Common.ModPlayers
+namespace LifeStealClass.Common.ModPlayers
 {
     public class WarScytheDash : ModPlayer
     {

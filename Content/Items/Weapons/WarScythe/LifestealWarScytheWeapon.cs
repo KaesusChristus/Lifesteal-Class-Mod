@@ -1,12 +1,12 @@
-﻿using HarvesterClassMod.Content.Core;
+﻿using LifeStealClass.Content.Core;
 using Terraria.Audio;
 using Terraria;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Common.ModPlayers;
-using HarvesterClassMod.Common.GlobalItems.Other;
+using LifeStealClass.Common.ModPlayers;
+using LifeStealClass.Common.GlobalItems.Other;
 
-namespace HarvesterClassMod.Content.Items.Weapons.WarScythe
+namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
     public abstract class LifestealWarScytheWeapon : LifeStealItem, IDashWeapon
     {

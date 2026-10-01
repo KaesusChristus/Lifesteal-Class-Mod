@@ -2,9 +2,9 @@
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using HarvesterClassMod.Content.Items.Accessories;
+using LifeStealClass.Content.Items.Accessories;
 
-namespace HarvesterClassMod.Common.GlobalItems.ItemDropRules
+namespace LifeStealClass.Common.GlobalItems.ItemDropRules
 {
     public class ToothOfCthulhuDropChance : GlobalItem
     {

@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace HarvesterClassMod.Common.ModPlayers
+namespace LifeStealClass.Common.ModPlayers
 {
     public class DarkManaSoulEffect : ModPlayer
     {

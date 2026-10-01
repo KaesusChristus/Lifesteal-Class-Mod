@@ -1,12 +1,12 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using HarvesterClassMod.Content.Projectiles.Weapon.WarScythe;
-using HarvesterClassMod.Content.Core;
-using HarvesterClassMod.Common.GlobalItems.Other;
-using HarvesterClassMod.Content.Items.Ingredients;
+using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Common.GlobalItems.Other;
+using LifeStealClass.Content.Items.Ingredients;
 
-namespace HarvesterClassMod.Content.Items.Weapons.WarScythe
+namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
     public class SpearFromTheDevil : LifestealWarScytheWeapon, IDashWeapon
     {

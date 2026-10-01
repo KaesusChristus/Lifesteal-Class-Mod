@@ -1,5 +1,5 @@
 DamageClasses: {
-	HarvesterClassMod.DisplayName: Lifesteal Class
+	LifeStealClass.DisplayName: Lifesteal Class
 	Lifestealdamage.DisplayName: lifesteal damage
 	LifestealDamage.DisplayName: Lifesteal Damage
 }

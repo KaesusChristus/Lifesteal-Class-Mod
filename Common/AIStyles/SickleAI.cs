@@ -1,9 +1,9 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Common.Utils;
+using LifeStealClass.Common.Utils;
 
-namespace HarvesterClassMod.Common.AIStyles
+namespace LifeStealClass.Common.AIStyles
 {
     public class SickleAI : GlobalProjectile
     {

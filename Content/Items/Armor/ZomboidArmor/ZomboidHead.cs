@@ -2,10 +2,10 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using HarvesterClassMod.Content.Core;
-using HarvesterClassMod.Content.Items.Ingredients;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Items.Ingredients;
 
-namespace HarvesterClassMod.Content.Items.Armor.ZomboidArmor
+namespace LifeStealClass.Content.Items.Armor.ZomboidArmor
 {
     [AutoloadEquip(EquipType.Head)]
     public class ZomboidHead : LifeStealItem
@@ -43,7 +43,7 @@ namespace HarvesterClassMod.Content.Items.Armor.ZomboidArmor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.HarvesterClassMod.ItemSetBonus.ZomboidSet");
+            player.setBonus = Language.GetTextValue("Mods.LifeStealClass.ItemSetBonus.ZomboidSet");
         }
 
         public override void AddRecipes()

@@ -2,10 +2,10 @@
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Common.ModPlayers;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Common.ModPlayers;
+using LifeStealClass.Content.Core;
 
-namespace HarvesterClassMod.Common.GlobalItems.Other
+namespace LifeStealClass.Common.GlobalItems.Other
 {
     public class OnHitHeal : GlobalItem
     {

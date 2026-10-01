@@ -1,12 +1,12 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using HarvesterClassMod.Content.Items.Ingredients;
+using LifeStealClass.Content.Items.Ingredients;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
-using HarvesterClassMod.Common.GlobalItems.Other;
+using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using LifeStealClass.Common.GlobalItems.Other;
 
-namespace HarvesterClassMod.Content.Items.Weapons.Sickle
+namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class PlatinumScythe : LifestealSickle
     {

@@ -1,11 +1,11 @@
 DamageClasses: {
-	HarvesterClassMod.DisplayName: Lifesteal Class
+	LifeStealClass.DisplayName: Lifesteal Class
 	Lifestealdamage.DisplayName: lifesteal damage
 	LifestealDamage.DisplayName: Lifesteal Damage
 }
 
 Mods: {
-	HarvesterClassMod: {
+	LifeStealClass: {
 		DamageClasses: {
 			LifestealDamage.DisplayName: Lifesteal Damage
 			HarvesterDamage.DisplayName: Harvester Damage
@@ -378,7 +378,7 @@ Mods: {
 		Buffs: {
 			DashCooldownBuff: {
 				DisplayName: Dash Cooldown Buff
-				Description: Mods.HarvesterClassMod.Buffs.DashCooldownBuff.Description
+				Description: Mods.LifeStealClass.Buffs.DashCooldownBuff.Description
 			}
 		}
 	}

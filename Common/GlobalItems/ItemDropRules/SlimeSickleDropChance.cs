@@ -2,9 +2,9 @@
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using HarvesterClassMod.Content.Items.Weapons.Sickle;
+using LifeStealClass.Content.Items.Weapons.Sickle;
 
-namespace HarvesterClassMod.Common.GlobalItems.ItemDropRules
+namespace LifeStealClass.Common.GlobalItems.ItemDropRules
 {
     public class SlimeSickleDropChance : GlobalItem
     {

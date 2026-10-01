@@ -4,13 +4,13 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using System.Collections.Generic;
 using System;
-using HarvesterClassMod.Content.Projectiles;
+using LifeStealClass.Content.Projectiles;
 using Mono.Cecil;
 using Terraria.DataStructures;
-using HarvesterClassMod.Content.Core;
-using HarvesterClassMod.Content.Items.Armor.YetiArmor;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Items.Armor.YetiArmor;
 
-namespace HarvesterClassMod.Common.ModPlayers.SetBoni
+namespace LifeStealClass.Common.ModPlayers.SetBoni
 {
     public class YetiArmorSetBonus : ModPlayer
     {

@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using HarvesterClassMod.Content.Items.Ingredients;
+using LifeStealClass.Content.Items.Ingredients;
 using Terraria.GameContent.ItemDropRules;
 
 
-namespace HarvesterClassMod.Common.GlobalNpcs.ItemDropRules
+namespace LifeStealClass.Common.GlobalNpcs.ItemDropRules
 {
     public class LifeShardDropChance : GlobalNPC
     {

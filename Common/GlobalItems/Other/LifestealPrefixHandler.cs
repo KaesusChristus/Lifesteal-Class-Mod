@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using HarvesterClassMod.Content.Items.Weapons.WarScythe;
+using LifeStealClass.Content.Items.Weapons.WarScythe;
 using Terraria.Utilities;
 
-namespace HarvesterClassMod.Common.GlobalItems.Other
+namespace LifeStealClass.Common.GlobalItems.Other
 {
     public class LifestealPrefixHandler : GlobalItem
     {

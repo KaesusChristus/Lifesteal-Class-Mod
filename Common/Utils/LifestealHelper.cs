@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 
-namespace HarvesterClassMod.Common.Utils
+namespace LifeStealClass.Common.Utils
 {
     public static class LifestealHelper
     {

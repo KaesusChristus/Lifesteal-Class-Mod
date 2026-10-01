@@ -4,10 +4,10 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.DataStructures;
 using System;
-using HarvesterClassMod.Content.Core;
-using HarvesterClassMod.Content.Projectiles.Accessories;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Projectiles.Accessories;
 
-namespace HarvesterClassMod.Content
+namespace LifeStealClass.Content
 {
     public class ToothOfCthulhuEffect : ModPlayer
     {

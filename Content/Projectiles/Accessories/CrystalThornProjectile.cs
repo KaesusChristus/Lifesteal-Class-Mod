@@ -1,10 +1,10 @@
-﻿using HarvesterClassMod.Common.Utils;
+﻿using LifeStealClass.Common.Utils;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HarvesterClassMod.Content.Projectiles.Accessories
+namespace LifeStealClass.Content.Projectiles.Accessories
 {
     public class CrystalThornProjectile : ModProjectile
     {

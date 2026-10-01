@@ -2,11 +2,11 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.DataStructures;
-using HarvesterClassMod.Common.ModPlayers;
-using HarvesterClassMod.Common.Utils;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Common.ModPlayers;
+using LifeStealClass.Common.Utils;
+using LifeStealClass.Content.Core;
 
-namespace HarvesterClassMod.Common.GlobalProjectiles
+namespace LifeStealClass.Common.GlobalProjectiles
 {
     public class LifestealEffectsProjectile : GlobalProjectile
     {

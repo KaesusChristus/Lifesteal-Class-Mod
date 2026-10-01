@@ -4,7 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace HarvesterClassMod.Common.GlobalItems.Other
+namespace LifeStealClass.Common.GlobalItems.Other
 {
     public class DashBonusStats : GlobalItem
     {

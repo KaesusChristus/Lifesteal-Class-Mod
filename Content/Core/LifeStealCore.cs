@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
 
-namespace HarvesterClassMod.Content.Core
+namespace LifeStealClass.Content.Core
 {
     public abstract class LifeStealItem : ModItem
     {

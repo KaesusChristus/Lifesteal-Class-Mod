@@ -3,9 +3,9 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using System.Collections.Generic;
-using HarvesterClassMod.Content.Items.Armor.DarbBloodArmor;
+using LifeStealClass.Content.Items.Armor.DarbBloodArmor;
 
-namespace HarvesterClassMod.Common.ModPlayers.SetBoni
+namespace LifeStealClass.Common.ModPlayers.SetBoni
 {
     public class DarkBloodArmorSetBonus : ModPlayer
     {

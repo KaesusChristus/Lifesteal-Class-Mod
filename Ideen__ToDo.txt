@@ -1,5 +1,5 @@
 
-Ideen HarvesterClassMod Mod
+Ideen LifeStealClass Mod
 
 #######################################################################################################
 
@@ -423,8 +423,8 @@ nur eine reine cosmetic sache also die heilung passiert ja auch schon vorher
 Besondere Waffe die man im Dungeon öffnen kann (sowie Biomtruhen und deren Waffen).
 Dazu der Schlüssel im Hardmode währrend Bloodmoon verfügbar machen lassen oder so
 
-Vampre knives müssen zur HarvesterClassMod hinzugefügt werden
+Vampre knives müssen zur LifeStealClass hinzugefügt werden
 
-Modifier für HarvesterClassMod hinzufügen
+Modifier für LifeStealClass hinzufügen
 
 Flask sollten für Speere und Sicheln wirken

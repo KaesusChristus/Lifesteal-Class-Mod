@@ -1,9 +1,9 @@
-﻿using HarvesterClassMod.Content;
-using HarvesterClassMod.Content.Items.Accessories;
+﻿using LifeStealClass.Content;
+using LifeStealClass.Content.Items.Accessories;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace HarvesterClassMod.Common.ModPlayers
+namespace LifeStealClass.Common.ModPlayers
 {
     public class HealinfoDisplayPlayer : ModPlayer
     {

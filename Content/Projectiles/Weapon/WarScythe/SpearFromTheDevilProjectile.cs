@@ -2,10 +2,10 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using HarvesterClassMod.Common.ModPlayers;
-using HarvesterClassMod.Content.Core;
+using LifeStealClass.Common.ModPlayers;
+using LifeStealClass.Content.Core;
 
-namespace HarvesterClassMod.Content.Projectiles.Weapon.WarScythe
+namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 {
     public class SpearFromTheDevilProjectile : BaseSpearProjectile
     {

@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.UI;
 using Terraria.UI.Chat;
 
-namespace HarvesterClassMod.Common.UI
+namespace LifeStealClass.Common.UI
 {
     // Adapted from https://github.com/absoluteAquarian/SerousCommonLib/blob/f0bf78ce357e740c2dd61e37a669fd4f8ff93283/src/UI/EnhancedItemSlotV2.cs
 

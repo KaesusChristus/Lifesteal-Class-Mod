@@ -6,9 +6,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 using System;
-using HarvesterClassMod.Common.Utils;
+using LifeStealClass.Common.Utils;
 
-namespace HarvesterClassMod.Common.UseStyles
+namespace LifeStealClass.Common.UseStyles
 {
     public class SickleUseStyles : GlobalItem
     {
