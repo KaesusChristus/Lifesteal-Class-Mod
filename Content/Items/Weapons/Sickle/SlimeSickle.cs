@@ -1,9 +1,9 @@
-﻿using LifeStealClass.Common.GlobalItems.Other;
-using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+﻿using HarvesterClassMod.Common.GlobalItems.Other;
+using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public class SlimeSickle : LifestealSickle
     {

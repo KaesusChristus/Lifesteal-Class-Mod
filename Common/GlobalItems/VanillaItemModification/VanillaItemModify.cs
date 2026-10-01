@@ -4,7 +4,7 @@ using Terraria.ID;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace LifeStealClass.Common.GlobalItems.VanillaItemModification
+namespace HarvesterClassMod.Common.GlobalItems.VanillaItemModification
 {
     public class VanillaItemModify : GlobalItem
     {

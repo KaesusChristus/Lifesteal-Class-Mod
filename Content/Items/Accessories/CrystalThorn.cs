@@ -1,11 +1,11 @@
-﻿using LifeStealClass.Common.ModPlayers;
+﻿using HarvesterClassMod.Common.ModPlayers;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Content.Items.Ingredients;
 
-namespace LifeStealClass.Content.Items.Accessories
+namespace HarvesterClassMod.Content.Items.Accessories
 {
     public class CrystalThorn : LifeStealItem
     {

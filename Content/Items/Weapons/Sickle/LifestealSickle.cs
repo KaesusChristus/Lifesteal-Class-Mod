@@ -3,9 +3,9 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public abstract class LifestealSickle : LifeStealItem
     {

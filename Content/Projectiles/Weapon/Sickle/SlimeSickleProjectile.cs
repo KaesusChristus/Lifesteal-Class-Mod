@@ -2,11 +2,11 @@
 using Microsoft.Xna.Framework;
 using System;
 
-namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
+namespace HarvesterClassMod.Content.Projectiles.Weapon.Sickle
 {
     public class SlimeSickleProjectile : LifestealSickleProjectile
     {
-        public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/SlimeSickle";
+        public override string Texture => "HarvesterClassMod/Content/Items/Weapons/Sickle/SlimeSickle";
 
         public override void SetDefaults()
         {

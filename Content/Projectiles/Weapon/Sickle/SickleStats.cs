@@ -1,4 +1,4 @@
-﻿namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
+﻿namespace HarvesterClassMod.Content.Projectiles.Weapon.Sickle
 {
     public struct SickleStats
     {

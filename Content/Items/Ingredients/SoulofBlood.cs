@@ -1,10 +1,10 @@
-﻿using LifeStealClass.Content.Core;
+﻿using HarvesterClassMod.Content.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace LifeStealClass.Content.Items.Ingredients
+namespace HarvesterClassMod.Content.Items.Ingredients
 {
     public class SoulOfBlood : LifeStealItem
     {

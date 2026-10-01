@@ -1,12 +1,12 @@
-﻿using LifeStealClass.Common.GlobalItems.Other;
+﻿using HarvesterClassMod.Common.GlobalItems.Other;
 using Microsoft.Xna.Framework;
-using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public class StarScythe : LifestealSickle
     {

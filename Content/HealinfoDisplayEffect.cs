@@ -1,9 +1,9 @@
-﻿using LifeStealClass.Common.ModPlayers;
+﻿using HarvesterClassMod.Common.ModPlayers;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace LifeStealClass.Content
+namespace HarvesterClassMod.Content
 {
     public class HealinfoDisplayEffect : InfoDisplay
     {

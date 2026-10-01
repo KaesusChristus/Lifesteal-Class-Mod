@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Common.ModPlayers;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Common.ModPlayers;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Accessories
+namespace HarvesterClassMod.Content.Items.Accessories
 {
     public class GreaterLifeCrystal : LifeStealItem
     {

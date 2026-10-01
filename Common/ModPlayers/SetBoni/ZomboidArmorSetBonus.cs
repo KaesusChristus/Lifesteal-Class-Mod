@@ -1,10 +1,10 @@
-﻿using LifeStealClass.Content.Items.Armor.ZomboidArmor;
+﻿using HarvesterClassMod.Content.Items.Armor.ZomboidArmor;
 using Terraria.ModLoader;
 using Terraria;
-using LifeStealClass.Common.GlobalItems.Other;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Common.GlobalItems.Other;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Common.ModPlayers.SetBoni
+namespace HarvesterClassMod.Common.ModPlayers.SetBoni
 {
     public class ZomboidArmorSetBonus : ModPlayer
     {

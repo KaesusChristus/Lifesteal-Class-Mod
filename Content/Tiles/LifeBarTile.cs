@@ -4,7 +4,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace LifeStealClass.Content.Tiles
+namespace HarvesterClassMod.Content.Tiles
 {
     public class LifeBarTile : ModTile
     {

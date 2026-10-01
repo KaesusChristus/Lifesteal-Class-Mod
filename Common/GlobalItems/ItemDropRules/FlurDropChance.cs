@@ -2,9 +2,9 @@
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Items.Ingredients;
 
-namespace LifeStealClass.Common.GlobalItems.ItemDropRules
+namespace HarvesterClassMod.Common.GlobalItems.ItemDropRules
 {
     public class FlurDropChance : GlobalItem
     {

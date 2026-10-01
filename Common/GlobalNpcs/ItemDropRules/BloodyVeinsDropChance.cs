@@ -1,11 +1,11 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Items.Ingredients;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using System.Collections.Generic;
 
-namespace LifeStealClass.Common.GlobalNpcs.ItemDropRules
+namespace HarvesterClassMod.Common.GlobalNpcs.ItemDropRules
 {
     public class BloodyVeinsDropChance : GlobalNPC
     {

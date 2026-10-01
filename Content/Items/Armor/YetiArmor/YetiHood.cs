@@ -1,12 +1,12 @@
-﻿using LifeStealClass.Content.Items.Ingredients;
+﻿using HarvesterClassMod.Content.Items.Ingredients;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using LifeStealClass.Common.ModPlayers.SetBoni;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Common.ModPlayers.SetBoni;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Armor.YetiArmor
+namespace HarvesterClassMod.Content.Items.Armor.YetiArmor
 {
     [AutoloadEquip(EquipType.Head)]
     public class YetiHood : LifeStealItem
@@ -40,7 +40,7 @@ namespace LifeStealClass.Content.Items.Armor.YetiArmor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.LifeStealClass.ItemSetBonus.YetiSet");
+            player.setBonus = Language.GetTextValue("Mods.HarvesterClassMod.ItemSetBonus.YetiSet");
             player.GetModPlayer<YetiArmorSetBonus>().setBonusActive = true;
         }
 

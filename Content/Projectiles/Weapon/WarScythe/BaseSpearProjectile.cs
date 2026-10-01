@@ -2,9 +2,9 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
+namespace HarvesterClassMod.Content.Projectiles.Weapon.WarScythe
 {
     public abstract class BaseSpearProjectile : ModProjectile
     {

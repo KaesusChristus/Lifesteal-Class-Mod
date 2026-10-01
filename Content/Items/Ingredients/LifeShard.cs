@@ -1,10 +1,10 @@
-﻿using LifeStealClass.Content.Core;
+﻿using HarvesterClassMod.Content.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace LifeStealClass.Content.Items.Ingredients
+namespace HarvesterClassMod.Content.Items.Ingredients
 {
     public class LifeShard : LifeStealItem
     {

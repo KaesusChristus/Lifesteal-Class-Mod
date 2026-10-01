@@ -1,4 +1,4 @@
-﻿namespace LifeStealClass.Common.Utils
+﻿namespace HarvesterClassMod.Common.Utils
 {
     public static class CustomAiStyleID
     {

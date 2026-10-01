@@ -1,9 +1,9 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using LifeStealClass.Content.Projectiles.Accessories;
+using HarvesterClassMod.Content.Projectiles.Accessories;
 
-namespace LifeStealClass.Common.ModPlayers
+namespace HarvesterClassMod.Common.ModPlayers
 {
     public class CrystalThornEffect : ModPlayer
     {

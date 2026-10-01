@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using ReLogic.Graphics;
 
-namespace LifeStealClass.Common.ModPlayers
+namespace HarvesterClassMod.Common.ModPlayers
 {
     public class WarScytheDashLayer : PlayerDrawLayer
     {

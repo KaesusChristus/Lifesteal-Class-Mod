@@ -1,12 +1,12 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Common.ModPlayers;
-using LifeStealClass.Content.Items.Placeable;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod.Common.ModPlayers;
+using HarvesterClassMod.Content.Items.Placeable;
+using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Content.Items.Ingredients;
 
-namespace LifeStealClass.Content.Items.Accessories
+namespace HarvesterClassMod.Content.Items.Accessories
 {
     public class DarkBloodCrystal : LifeStealItem
     {

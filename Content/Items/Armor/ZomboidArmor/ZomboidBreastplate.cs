@@ -2,10 +2,10 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Content.Items.Ingredients;
 
-namespace LifeStealClass.Content.Items.Armor.ZomboidArmor
+namespace HarvesterClassMod.Content.Items.Armor.ZomboidArmor
 {
     [AutoloadEquip(EquipType.Body)]
     public class ZomboidBreastplate : LifeStealItem

@@ -7,10 +7,10 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Content.Core;
 using System.IO;
 
-namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
+namespace HarvesterClassMod.Content.Projectiles.Weapon.Sickle
 {
     public abstract class LifestealSickleProjectile : ModProjectile
     {

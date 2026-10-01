@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Common.ModPlayers;
+using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Common.ModPlayers;
 using Terraria.ID;
 
-namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
+namespace HarvesterClassMod.Content.Projectiles.Weapon.WarScythe
 {
     public class MandibleStrikerProjectile : BaseSpearProjectile
     {

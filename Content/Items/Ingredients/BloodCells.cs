@@ -1,8 +1,8 @@
-﻿using LifeStealClass.Content.Core;
+﻿using HarvesterClassMod.Content.Core;
 using Terraria;
 using Terraria.ID;
 
-namespace LifeStealClass.Content.Items.Ingredients
+namespace HarvesterClassMod.Content.Items.Ingredients
 {
     public class BloodCells : LifeStealItem
     {

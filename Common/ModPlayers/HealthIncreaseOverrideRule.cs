@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace LifeStealClass.Common.ModPlayers
+namespace HarvesterClassMod.Common.ModPlayers
 {
     public class HealthIncreaseOverrideRule : ModPlayer
     {

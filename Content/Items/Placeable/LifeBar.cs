@@ -2,14 +2,14 @@
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass;
-using LifeStealClass.Content;
-using LifeStealClass.Content.Tiles;
-using LifeStealClass.Content.Items.Ingredients;
+using HarvesterClassMod;
+using HarvesterClassMod.Content;
+using HarvesterClassMod.Content.Tiles;
+using HarvesterClassMod.Content.Items.Ingredients;
 using Terraria.DataStructures;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Placeable
+namespace HarvesterClassMod.Content.Items.Placeable
 {
     public class LifeBar : LifeStealItem
     {

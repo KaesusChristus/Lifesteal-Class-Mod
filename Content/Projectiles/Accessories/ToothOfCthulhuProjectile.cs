@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria.Audio;
 using System;
-using LifeStealClass.Common.ModPlayers;
+using HarvesterClassMod.Common.ModPlayers;
 
-namespace LifeStealClass.Content.Projectiles.Accessories
+namespace HarvesterClassMod.Content.Projectiles.Accessories
 {
     public class ToothOfCthulhuProjectile : ModProjectile
     {

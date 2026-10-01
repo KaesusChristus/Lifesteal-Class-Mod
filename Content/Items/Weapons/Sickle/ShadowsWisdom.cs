@@ -1,11 +1,11 @@
-﻿using LifeStealClass.Common.GlobalItems.Other;
-using LifeStealClass.Content.Items.Ingredients;
-using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+﻿using HarvesterClassMod.Common.GlobalItems.Other;
+using HarvesterClassMod.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public class ShadowsWisdom : LifestealSickle
     {

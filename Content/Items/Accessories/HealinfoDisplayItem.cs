@@ -1,11 +1,11 @@
-﻿using LifeStealClass.Common.ModPlayers;
-using LifeStealClass.Content.Items.Ingredients;
+﻿using HarvesterClassMod.Common.ModPlayers;
+using HarvesterClassMod.Content.Items.Ingredients;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Items.Placeable;
+using HarvesterClassMod.Content.Items.Placeable;
 
-namespace LifeStealClass.Content.Items.Accessories
+namespace HarvesterClassMod.Content.Items.Accessories
 {
     public class HealinfoDisplayItem : ModItem
     {

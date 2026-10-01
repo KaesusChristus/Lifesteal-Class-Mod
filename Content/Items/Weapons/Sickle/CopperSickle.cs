@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Content.Items.Ingredients;
-using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using HarvesterClassMod.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public class CopperSickle : LifestealSickle
     {

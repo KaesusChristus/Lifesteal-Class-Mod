@@ -1,12 +1,12 @@
-﻿using LifeStealClass.Content.Core;
-using LifeStealClass.Content.Items.Ingredients;
+﻿using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Content.Items.Ingredients;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
 
-namespace LifeStealClass.Content.Items.Armor.YetiArmor
+namespace HarvesterClassMod.Content.Items.Armor.YetiArmor
 {
     [AutoloadEquip(EquipType.Body)]
     public class YetiBreastplate : LifeStealItem

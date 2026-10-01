@@ -2,11 +2,11 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using LifeStealClass.Common.ModPlayers.SetBoni;
-using LifeStealClass.Content.Items.Placeable;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Common.ModPlayers.SetBoni;
+using HarvesterClassMod.Content.Items.Placeable;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Armor.DarbBloodArmor
+namespace HarvesterClassMod.Content.Items.Armor.DarbBloodArmor
 {
     [AutoloadEquip(EquipType.Head)]
     public class DarkBloodHelmet : LifeStealItem
@@ -46,7 +46,7 @@ namespace LifeStealClass.Content.Items.Armor.DarbBloodArmor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = Language.GetTextValue("Mods.LifeStealClass.ItemSetBonus.DarkBloodSet");
+            player.setBonus = Language.GetTextValue("Mods.HarvesterClassMod.ItemSetBonus.DarkBloodSet");
             player.GetModPlayer<DarkBloodArmorSetBonus>().setBonusActive = true;
         }
 

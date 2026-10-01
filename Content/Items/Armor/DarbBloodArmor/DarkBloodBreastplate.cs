@@ -2,10 +2,10 @@
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Items.Placeable;
-using LifeStealClass.Content.Core;
+using HarvesterClassMod.Content.Items.Placeable;
+using HarvesterClassMod.Content.Core;
 
-namespace LifeStealClass.Content.Items.Armor.DarbBloodArmor
+namespace HarvesterClassMod.Content.Items.Armor.DarbBloodArmor
 {
     [AutoloadEquip(EquipType.Body)]
     public class DarkBloodBreastplate : LifeStealItem

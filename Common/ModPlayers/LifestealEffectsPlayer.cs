@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Common.GlobalItems.Other;
+using HarvesterClassMod.Content.Core;
+using HarvesterClassMod.Common.GlobalItems.Other;
 using Microsoft.Xna.Framework;
 
-namespace LifeStealClass.Common.ModPlayers
+namespace HarvesterClassMod.Common.ModPlayers
 {
     public class LifestealEffectsPlayer : ModPlayer
     {

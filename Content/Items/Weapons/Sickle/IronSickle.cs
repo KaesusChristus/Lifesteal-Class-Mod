@@ -1,11 +1,11 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using LifeStealClass.Content.Items.Ingredients;
-using LifeStealClass.Content.Projectiles.Weapon.Sickle;
-using LifeStealClass.Common.GlobalItems.Other;
+using HarvesterClassMod.Content.Items.Ingredients;
+using HarvesterClassMod.Content.Projectiles.Weapon.Sickle;
+using HarvesterClassMod.Common.GlobalItems.Other;
 
-namespace LifeStealClass.Content.Items.Weapons.Sickle
+namespace HarvesterClassMod.Content.Items.Weapons.Sickle
 {
     public class IronSickle : LifestealSickle
     {
