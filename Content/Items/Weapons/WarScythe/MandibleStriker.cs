@@ -2,19 +2,18 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Common.GlobalItems.Other;
 using LifeStealClass.Content.Items.Ingredients;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public class MandibleStriker : LifestealWarScytheWeapon, IDashWeapon
+    public class MandibleStriker : LifestealWarScytheWeapon
     {
-        public new float DashSpeed => 15f;
-        public new int DashDuration => 10;
-        public new int DashCooldown => 180;
-        public new int DashDamageBonus => 40;
-        public new int DashCritBonus => 16;
+        public override float DashSpeed => 15f;
+        public override int DashDuration => 10;
+        public override int DashCooldown => 180;
+        public override int DashDamageBonus => 40;
+        public override int DashCritBonus => 16;
+        protected override int DashHealthCost => 12;
 
         public override void SetDefaults()
         {
@@ -27,18 +26,12 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
             Item.useTime = 22;
             Item.crit = 25;
 
-            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.damage = 12;
             Item.knockBack = 6.5f;
 
             Item.shootSpeed = 4f;
             Item.shoot = ModContent.ProjectileType<MandibleStrikerProjectile>();
 
-            Item.GetGlobalItem<HealthCost>().dashHealthCost = 12;
-
-            var dashStats = Item.GetGlobalItem<DashBonusStats>();
-            dashStats.dashDamageBonus = DashDamageBonus;
-            dashStats.dashCritBonus = DashCritBonus;
         }
 
         public override void AddRecipes()

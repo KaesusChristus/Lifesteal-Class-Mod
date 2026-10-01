@@ -373,6 +373,10 @@ Mods: {
 			GoldScytheProjectile.DisplayName: Gold Scythe Projectile
 			PlatinumScytheProjectile.DisplayName: Platinum Scythe Projectile
 			StarScytheProjectile.DisplayName: Star Scythe Projectile
+			SpectralScytheEchoProjectile.DisplayName: Spectral Scythe Echo Projectile
+			StarScytheMeteorProjectile.DisplayName: Star Scythe Meteor Projectile
+			CrimsonScytheWaveProjectile.DisplayName: Crimson Scythe Wave Projectile
+			DemoniteSoulProjectile.DisplayName: Demonite Soul Projectile
 		}
 
 		Buffs: {

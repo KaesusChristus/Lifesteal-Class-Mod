@@ -2,7 +2,6 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Ingredients;
-using Microsoft.Xna.Framework;
 using LifeStealClass.Content.Projectiles.Weapon.Sickle;
 using LifeStealClass.Common.GlobalItems.Other;
 
@@ -10,7 +9,6 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class GoldScythe : LifestealSickle
     {
-        private int tickTimer = 0;
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -26,44 +24,6 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.shootSpeed = 7f;
 
             Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
-        }
-
-        public override void HoldItem(Player player)
-        {
-            if (player.itemAnimation > 0)
-            {
-                tickTimer++;
-
-                if (tickTimer >= 60)
-                {
-                    player.ChangeDir(Main.MouseWorld.X > player.Center.X ? 1 : -1);
-                    tickTimer = 0;
-
-                    if (player.whoAmI == Main.myPlayer)
-                    {
-                        Vector2 direction = Main.MouseWorld - player.Center;
-                        direction.Normalize();
-                        direction *= 7f;
-
-                        Projectile.NewProjectile( player.GetSource_ItemUse(Item), player.Center, direction, ProjectileID.RubyBolt, Item.damage, Item.knockBack, player.whoAmI);
-                    }
-                }
-            }
-            else
-            {
-                tickTimer = 0; // Reset wenn nicht mehr geschwungen wird
-            }
-        }
-
-        public override void MeleeEffects(Player player, Rectangle hitbox)
-        {
-
-            if (Main.rand.NextBool(3)) // ~33% Chance pro Frame während Schwung
-            {
-                int dust = Dust.NewDust(hitbox.TopLeft(), hitbox.Width, hitbox.Height, DustID.GoldCoin);
-                Main.dust[dust].noGravity = true;
-                Main.dust[dust].scale = 1.4f;
-            }
         }
 
         public override void AddRecipes()

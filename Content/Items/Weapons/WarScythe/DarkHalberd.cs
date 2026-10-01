@@ -3,18 +3,17 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Placeable;
 using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Common.GlobalItems.Other;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public class DarkHalberd : LifestealWarScytheWeapon, IDashWeapon
+    public class DarkHalberd : LifestealWarScytheWeapon
     {
-        public new float DashSpeed => 20f;
-        public new int DashDuration => 8;
-        public new int DashCooldown => 180;
-        public new int DashDamageBonus => 80;
-        public new int DashCritBonus => 50;
+        public override float DashSpeed => 20f;
+        public override int DashDuration => 8;
+        public override int DashCooldown => 180;
+        public override int DashDamageBonus => 80;
+        public override int DashCritBonus => 50;
+        protected override int DashHealthCost => 25;
 
         public override void SetDefaults()
         {
@@ -27,18 +26,12 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
             Item.useTime = 22;
             Item.crit = 25;
 
-            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.damage = 10;
             Item.knockBack = 6.5f;
 
             Item.shootSpeed = 3.7f;
             Item.shoot = ModContent.ProjectileType<DarkHalberdProjectile>();
 
-            Item.GetGlobalItem<HealthCost>().dashHealthCost = 25;
-
-            var dashStats = Item.GetGlobalItem<DashBonusStats>();
-            dashStats.dashDamageBonus = DashDamageBonus;
-            dashStats.dashCritBonus = DashCritBonus;
         }
 
         public override void AddRecipes()

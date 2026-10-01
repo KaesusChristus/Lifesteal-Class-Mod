@@ -11,6 +11,8 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             base.SetDefaults();
 
+            Projectile.width = 46;
+            Projectile.height = 44;
             Projectile.timeLeft = 60;
         }
 
@@ -18,13 +20,6 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             return new SickleStats
             {
-                SWINGRANGE = 2.0f * MathF.PI,
-                SPINRANGE = 3.0f * MathF.PI,
-
-                WINDUP = 0.3f,
-                UNWIND = 0.55f,
-                SPINTIME = 2.0f,
-
                 PrepTime = 16f,
                 ExecTime = 12f,
                 HideTime = 14f,

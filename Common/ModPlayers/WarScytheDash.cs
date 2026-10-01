@@ -6,6 +6,7 @@ using Terraria.Audio;
 using System;
 using LifeStealClass.Common.GlobalItems.Other;
 using Microsoft.Xna.Framework.Graphics;
+using LifeStealClass.Common.Interfaces;
 
 namespace LifeStealClass.Common.ModPlayers
 {

@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using LifeStealClass.Content.Items.Ingredients;
 
-namespace LifeStealClass.Common.GlobalNPCs
+namespace LifeStealClass.Common.GlobalNpcs.ItemDropRules
 {
     public class BloodCellsDropChance : GlobalNPC
     {

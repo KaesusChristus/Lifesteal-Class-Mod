@@ -1,26 +1,21 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.Audio;
-using Microsoft.Xna.Framework;
-using LifeStealClass.Content.Core;
-using Terraria.ModLoader;
 using System;
+using LifeStealClass.Content.Core;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ModLoader;
 
 namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
     public class TheSlaughtersScytheProjectile : LifestealSickleProjectile
     {
         public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/TheSlaughtersScythe";
-        //private bool arrowSpawned = false;
 
         public override void SetDefaults()
         {
             base.SetDefaults();
-
-            Projectile.width = 48;
-            Projectile.height = 38;
+            Projectile.width = 54;
+            Projectile.height = 44;
             Projectile.scale = 1.2f;
-
             Projectile.timeLeft = 50;
         }
 
@@ -28,95 +23,36 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             return new SickleStats
             {
-                SWINGRANGE = 1.67f * MathF.PI,
-                SPINRANGE = 3.5f * MathF.PI,
-
-                WINDUP = 0.15f,
-                UNWIND = 0.4f,
-                SPINTIME = 2.5f,
-
                 PrepTime = 12f,
                 ExecTime = 8f,
                 HideTime = 12f,
-
                 scale = 1.35f,
                 hitboxWidth = 15f,
-
                 rotationOffsetRight = MathHelper.ToRadians(45f),
                 rotationOffsetLeft = MathHelper.ToRadians(135f)
             };
         }
 
-        /*
-
-        public override void OnKill(int timeLeft)
+        protected override void OnAttackStarted()
         {
-            SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.position);
+            if (Main.myPlayer != Projectile.owner)
+                return;
 
-            for (int i = 0; i < 20; i++)
+            Vector2 direction = GetAttackDirection();
+            float damageMultiplier = CurrentAttack == SickleAttackType.HeavySlash ? 0.28f : 0.2f;
+
+            for (int i = -1; i <= 1; i++)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Blood, 0f, 0f, 100, new Color(140, 27, 130), 1.8f);
-                dust.noGravity = true;
-            }
-
-            int count = 5;
-            float speed = 4f;
-
-            float startAngle = MathHelper.ToRadians(110f);
-            float endAngle = MathHelper.ToRadians(70f);
-            float angleStep = (endAngle - startAngle) / (count - 1);
-
-            for (int i = 0; i < count; i++)
-            {
-                float angle = startAngle + angleStep * i;
-                Vector2 direction = angle.ToRotationVector2();
-                Vector2 spawnPos = Projectile.Center + direction;
-                Vector2 velocity = (direction * speed) * 0.75f;
-
-                Projectile proj = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), spawnPos, velocity, ProjectileID.BloodShot, Projectile.damage, Projectile.knockBack, Projectile.owner, 1f);
-                proj.DamageType = ModContent.GetInstance<HarvesterDamage>();
-                proj.friendly = true;
-                proj.hostile = false;
-                proj.scale = 0.8f;
-            }
-        }
-
-        */
-
-        public Color GetGlowColor()
-        {
-            return new Color(255, 40, 40);
-        }
-
-        /*
-
-        EXAMPLE TO ACCESS A SPECIFIC ATTACKTYPE
-
-        public override void AI()
-        {
-            base.AI();
-
-            if (Timer == 0)
-                arrowSpawned = false;
-
-            if (CurrentAttack == AttackType.Spin && !arrowSpawned)
-            {
-                arrowSpawned = true;
-
-                Vector2 direction = (Main.MouseWorld - Owner.MountedCenter).SafeNormalize(Vector2.UnitX);
-
+                Vector2 velocity = direction.RotatedBy(MathHelper.ToRadians(10f * i)) * 9f;
                 Projectile.NewProjectile(
                     Projectile.GetSource_FromThis(),
-                    Owner.MountedCenter,
-                    direction * 12f,
-                    ProjectileID.WoodenArrowFriendly,
-                    Projectile.damage / 2,
-                    1f,
-                    Projectile.owner
-                );
+                    Owner.MountedCenter + direction * 24f,
+                    velocity,
+                    ModContent.ProjectileType<CrimsonScytheWaveProjectile>(),
+                    Math.Max(1, (int)(Projectile.damage * damageMultiplier)),
+                    Projectile.knockBack * 0.45f,
+                    Projectile.owner);
             }
         }
-
-        */
     }
 }

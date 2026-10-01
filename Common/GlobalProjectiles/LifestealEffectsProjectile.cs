@@ -2,7 +2,6 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.DataStructures;
-using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Common.Utils;
 using LifeStealClass.Content.Core;
 
@@ -12,34 +11,31 @@ namespace LifeStealClass.Common.GlobalProjectiles
     {
         public override bool InstancePerEntity => true;
 
-        public bool FromLifestealItem;
+        public bool FromLifestealItem { get; private set; }
+        public Item SourceItem { get; private set; }
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
             if (source is EntitySource_ItemUse itemSource)
             {
-                if (itemSource.Item.ModItem is LifeStealItem)
-                {
-                    FromLifestealItem = true;
-                }
+                SourceItem = itemSource.Item;
+                FromLifestealItem = SourceItem.ModItem is LifeStealItem;
             }
         }
 
-        public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
+        public override void OnHitNPC(
+            Projectile projectile,
+            NPC target,
+            NPC.HitInfo hit,
+            int damageDone)
         {
-            if (!FromLifestealItem)
-                return;
-
-            Player player = Main.player[projectile.owner];
-
-            bool crit = hit.Crit;
-
-            player.GetModPlayer<LifestealEffectsPlayer>().AddDamage(damageDone);
-            player.GetModPlayer<LifestealEffectsPlayer>().IsCrit(crit);
-
-            if(crit)
+            if (FromLifestealItem && hit.Crit)
             {
-                LifestealHelper.MakeDust(target.position, target.width, target.height, DustID.LifeDrain);
+                LifestealHelper.MakeDust(
+                    target.position,
+                    target.width,
+                    target.height,
+                    DustID.LifeDrain);
             }
         }
 

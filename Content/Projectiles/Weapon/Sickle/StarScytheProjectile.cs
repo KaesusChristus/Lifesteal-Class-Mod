@@ -10,13 +10,15 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
     public class StarScytheProjectile : LifestealSickleProjectile
     {
+        private bool meteorSpawned;
+
         public override string Texture => "LifeStealClass/Content/Items/Weapons/Sickle/StarScythe";
 
         public override void SetDefaults()
         {
             base.SetDefaults();
 
-            Projectile.width = 50;
+            Projectile.width = 62;
             Projectile.height = 48;
             Projectile.scale = 1.2f;
 
@@ -27,13 +29,6 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             return new SickleStats
             {
-                SWINGRANGE = 1.67f * MathF.PI,
-                SPINRANGE = 3.5f * MathF.PI,
-
-                WINDUP = 0.15f,
-                UNWIND = 0.4f,
-                SPINTIME = 2.5f,
-
                 PrepTime = 12f,
                 ExecTime = 8f,
                 HideTime = 12f,
@@ -48,7 +43,9 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
-            if (CurrentAttack == AttackType.Spin)
+            base.ModifyHitNPC(target, ref modifiers);
+
+            if (CurrentAttack == SickleAttackType.HeavySlash)
             {
                 SoundEngine.PlaySound(SoundID.Item89);
                 target.AddBuff(BuffID.OnFire, 180);
@@ -82,6 +79,31 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
                     d.noGravity = true;
                 }
             }
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (meteorSpawned || Main.myPlayer != Projectile.owner)
+                return;
+
+            meteorSpawned = true;
+
+            Vector2 spawnPosition = target.Center + new Vector2(
+                Main.rand.NextFloat(-90f, 90f),
+                -520f);
+            Vector2 velocity = (target.Center - spawnPosition)
+                .SafeNormalize(Vector2.UnitY)
+                * 12f;
+
+            Projectile.NewProjectile(
+                Projectile.GetSource_FromThis(),
+                spawnPosition,
+                velocity,
+                ModContent.ProjectileType<StarScytheMeteorProjectile>(),
+                System.Math.Max(1, (int)(damageDone * 0.75f)),
+                Projectile.knockBack,
+                Projectile.owner,
+                target.whoAmI);
         }
     }
 }

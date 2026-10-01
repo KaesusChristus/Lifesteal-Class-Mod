@@ -13,14 +13,10 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 
         public override void SetDefaults()
         {
+            base.SetDefaults();
+
             Projectile.width = 32;
             Projectile.height = 32;
-
-            Projectile.aiStyle = 19; // Spear aiStyle
-            Projectile.friendly = true;
-            Projectile.tileCollide = false;
-            Projectile.penetrate = -1;
-            Projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)

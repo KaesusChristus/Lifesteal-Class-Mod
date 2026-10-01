@@ -1,8 +1,11 @@
-﻿public interface IDashWeapon
+namespace LifeStealClass.Common.Interfaces
 {
-    float DashSpeed { get; }
-    int DashDuration { get; }
-    int DashCooldown { get; }
-    int DashDamageBonus { get; }
-    int DashCritBonus { get; }
+    public interface IDashWeapon
+    {
+        float DashSpeed { get; }
+        int DashDuration { get; }
+        int DashCooldown { get; }
+        int DashDamageBonus { get; }
+        int DashCritBonus { get; }
+    }
 }

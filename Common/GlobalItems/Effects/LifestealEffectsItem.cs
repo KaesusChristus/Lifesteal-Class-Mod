@@ -13,12 +13,9 @@ namespace LifeStealClass.Common.GlobalItems.Effects
         {
             if (item.ModItem is LifeStealItem)
             {
-                bool crit = hit.Crit;
+                player.GetModPlayer<LifestealEffectsPlayer>().RegisterHit(damageDone, hit.Crit);
 
-                player.GetModPlayer<LifestealEffectsPlayer>().AddDamage(damageDone);
-                player.GetModPlayer<LifestealEffectsPlayer>().IsCrit(crit);
-
-                if (crit)
+                if (hit.Crit)
                 {
                     LifestealHelper.MakeDust(target.position, target.width, target.height, DustID.LifeDrain);
                 }

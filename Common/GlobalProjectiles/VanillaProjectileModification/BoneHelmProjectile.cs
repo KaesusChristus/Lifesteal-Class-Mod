@@ -10,7 +10,7 @@ namespace LifeStealClass.Common.GlobalProjectiles.VanillaProjectileModification
         public override void SetDefaults(Projectile projectile)
         {
             // Überprüfe, ob das Projektil vom Bone Helm ist
-            if (projectile.type == 964)
+            if (projectile.type == ProjectileID.InsanityShadowFriendly)
             {
                 projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
                 projectile.damage = +20;

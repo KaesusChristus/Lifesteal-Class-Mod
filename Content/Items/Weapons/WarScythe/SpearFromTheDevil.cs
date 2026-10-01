@@ -2,19 +2,18 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Projectiles.Weapon.WarScythe;
-using LifeStealClass.Content.Core;
-using LifeStealClass.Common.GlobalItems.Other;
 using LifeStealClass.Content.Items.Ingredients;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
-    public class SpearFromTheDevil : LifestealWarScytheWeapon, IDashWeapon
+    public class SpearFromTheDevil : LifestealWarScytheWeapon
     {
-        public new float DashSpeed => 23f;
-        public new int DashDuration => 9;
-        public new int DashCooldown => 600;
-        public new int DashDamageBonus => 120;
-        public new int DashCritBonus => 70;
+        public override float DashSpeed => 23f;
+        public override int DashDuration => 9;
+        public override int DashCooldown => 600;
+        public override int DashDamageBonus => 120;
+        public override int DashCritBonus => 70;
+        protected override int DashHealthCost => 34;
 
         public override void SetDefaults()
         {
@@ -27,17 +26,11 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
             Item.useTime = 20;
             Item.crit = 20;
 
-            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.damage = 25;
             Item.knockBack = 3f;
 
             Item.shootSpeed = 4f;
             Item.shoot = ModContent.ProjectileType<SpearFromTheDevilProjectile>();
-
-            Item.GetGlobalItem<HealthCost>().dashHealthCost = 34;
-            var dashStats = Item.GetGlobalItem<DashBonusStats>();
-            dashStats.dashDamageBonus = DashDamageBonus;
-            dashStats.dashCritBonus = DashCritBonus;
 
         }
 

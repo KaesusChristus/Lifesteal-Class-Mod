@@ -7,7 +7,7 @@ using System;
 using LifeStealClass.Content.Core;
 using LifeStealClass.Content.Projectiles.Accessories;
 
-namespace LifeStealClass.Content
+namespace LifeStealClass.Common.ModPlayers
 {
     public class ToothOfCthulhuEffect : ModPlayer
     {
@@ -22,8 +22,6 @@ namespace LifeStealClass.Content
 
         private const int MinOffsetY = -200;
         private const int MaxOffsetY = 200;
-
-        private int attacks = 0;
 
         public override void ResetEffects()
         {

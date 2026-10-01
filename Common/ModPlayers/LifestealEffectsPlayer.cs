@@ -1,101 +1,80 @@
-﻿using Terraria;
-using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
 using LifeStealClass.Common.GlobalItems.Other;
+using LifeStealClass.Common.GlobalProjectiles;
+using LifeStealClass.Common.Interfaces;
+using LifeStealClass.Content.Core;
 using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ModLoader;
 
 namespace LifeStealClass.Common.ModPlayers
 {
     public class LifestealEffectsPlayer : ModPlayer
     {
-        private int totalDamageDealt;
-        private const float lifestealPercentage = 0.05f;
-        private bool crit;
-        public int healAmount;
+        private const float LifestealPercentage = 0.05f;
+        private const ulong TicksPerSecond = 60;
+
+        private int criticalDamageDealt;
+        private int queuedHealAmount;
         private int healAmountAccumulator;
-        private double lastUpdate;
+        private ulong lastHealingSampleUpdate;
         private int currentHealAmountPerSecond;
-        private int lastHealAmountPerSecond;
-        private int constHealAmount;
         private int bonusHealAdd;
-        private int bonusHealMulti = 1;
+        private int bonusHealMultiplier = 1;
+
         public int bonusHealOnHit;
         public bool allowHeal = true;
-
-        private int overheal;
         public int getOverHeal;
+        public int reduceLifecostFlat;
 
-        public int reduceLifecostFlat = 0;
-
-
-        public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
+        public override void OnHitNPCWithProj(
+            Projectile projectile,
+            NPC target,
+            NPC.HitInfo hit,
+            int damageDone)
         {
-            if (proj.localAI.Length > 1 && proj.localAI[1] == 1f || allowHeal == false)
+            if (projectile.ModProjectile is INoLifestealProjectile || !allowHeal)
                 return;
 
-            if (proj.DamageType == ModContent.GetInstance<HarvesterDamage>())
+            if (projectile.DamageType != ModContent.GetInstance<HarvesterDamage>())
+                return;
+
+            RegisterHit(damageDone, hit.Crit);
+
+            Item sourceItem = projectile
+                .GetGlobalProjectile<LifestealEffectsProjectile>()
+                .SourceItem;
+
+            if (sourceItem == null)
+                return;
+
+            OnHitHeal healData = sourceItem.GetGlobalItem<OnHitHeal>();
+            if (healData.baseHealOnHit > 0)
             {
-                crit = hit.Crit;
-                AddDamage(damageDone);
-                IsCrit(crit);
-
-                var tracked = proj.GetGlobalProjectile<ProjectileSourceTracker>();
-                Item sourceItem = tracked?.sourceItem;
-
-                if (sourceItem != null)
-                {
-                    var healData = sourceItem.GetGlobalItem<OnHitHeal>();
-                    if (healData.baseHealOnHit > 0)
-                    {
-                        int totalBonus = healData.bonusHealOnHit; // direkt vom Item
-                        int heal = healData.baseHealOnHit + totalBonus;
-
-                        int oldLife = Player.statLife;
-                        int maxLife = Player.statLifeMax2;
-
-                        Player.statLife += heal;
-                        if (Player.statLife > maxLife)
-                            Player.statLife = maxLife;
-
-                        int actualHealed = Player.statLife - oldLife;
-                        overheal = heal - actualHealed;
-
-                        if (maxLife != oldLife)
-                            Player.HealEffect(actualHealed);
-
-                        if (overheal > 0)
-                        {
-                            OverHeal(overheal);
-                        }
-                    }
-                }
+                SetHealAmount(healData.baseHealOnHit + healData.bonusHealOnHit);
             }
         }
 
-
-        public void AddDamage(int damageDone)
+        public void RegisterHit(int damageDone, bool isCritical)
         {
-            totalDamageDealt = damageDone;
+            if (isCritical)
+            {
+                criticalDamageDealt += damageDone;
+            }
         }
 
-        public void IsCrit(bool critDone)
+        public void SetHealAmount(int healAmount)
         {
-            crit = critDone;
-        }
-
-        public void SetHealAmount(int setHealAmount)
-        {
-            constHealAmount = setHealAmount;
+            queuedHealAmount += healAmount;
         }
 
         public void BonusHealAmountAdd(int bonusHealAmountAdd)
         {
-            bonusHealAdd = bonusHealAmountAdd;
+            bonusHealAdd += bonusHealAmountAdd;
         }
 
         public void BonusHealAmountMulti(int bonusHealAmountMulti)
         {
-            bonusHealMulti = bonusHealAmountMulti;
+            bonusHealMultiplier *= bonusHealAmountMulti;
         }
 
         public int GetHealBonus()
@@ -109,72 +88,65 @@ namespace LifeStealClass.Common.ModPlayers
             allowHeal = true;
         }
 
-
-
         public override void UpdateLifeRegen()
         {
-            if (allowHeal == false)
-                return;
-
-            if (totalDamageDealt > 0 && crit || constHealAmount > 0)
+            if (allowHeal)
             {
-                if (constHealAmount == 0)
+                int lifestealAmount = (int)(criticalDamageDealt * LifestealPercentage);
+                int baseHealAmount = lifestealAmount + queuedHealAmount;
+
+                if (baseHealAmount > 0)
                 {
-                    healAmount = (int)(totalDamageDealt * lifestealPercentage);
-                } 
-                else
-                {
-                    healAmount = constHealAmount;
+                    Player.lifeRegenTime = 0;
+                    Player.lifeRegen += baseHealAmount * 2;
+
+                    int totalHeal = (baseHealAmount * bonusHealMultiplier) + GetHealBonus();
+                    healAmountAccumulator += ApplyHealing(totalHeal);
                 }
-
-                Player.lifeRegenTime = 0;
-                Player.lifeRegen += (healAmount * 2);
-                int totalHeal = (healAmount * bonusHealMulti) + bonusHealAdd;
-                int oldLife = Player.statLife;
-                int maxLife = Player.statLifeMax2;
-
-                // Heilung anwenden
-                Player.statLife += totalHeal;
-                if (Player.statLife > maxLife)
-                    Player.statLife = maxLife;
-
-                int actualHealed = Player.statLife - oldLife;
-                overheal = totalHeal - actualHealed;
-
-                if (maxLife != oldLife && actualHealed != 0)
-                    Player.HealEffect(actualHealed);
-
-                // Overheal amount
-                if (overheal > 0)
-                {
-                    OverHeal(overheal);
-                }
-
-
-                healAmountAccumulator += healAmount;
             }
 
-            totalDamageDealt = 0;
-            constHealAmount = 0;
+            criticalDamageDealt = 0;
+            queuedHealAmount = 0;
             bonusHealAdd = 0;
-            bonusHealMulti = 1;
-            allowHeal = true;
+            bonusHealMultiplier = 1;
 
-            if (Main.GameUpdateCount - lastUpdate >= 1)
-            {
-                currentHealAmountPerSecond = healAmountAccumulator;
-                if (currentHealAmountPerSecond > 0)
-                {
-                    lastHealAmountPerSecond = currentHealAmountPerSecond;
-                }
-                healAmountAccumulator = 0;
-                lastUpdate = Main.GameUpdateCount;
-            }
+            UpdateHealingPerSecond();
         }
 
         public int GetHealAmountPerSecond()
         {
-            return currentHealAmountPerSecond != 0 ? currentHealAmountPerSecond : lastHealAmountPerSecond;
+            return currentHealAmountPerSecond;
+        }
+
+        private int ApplyHealing(int amount)
+        {
+            int oldLife = Player.statLife;
+            Player.statLife = System.Math.Min(Player.statLife + amount, Player.statLifeMax2);
+
+            int actualHealed = Player.statLife - oldLife;
+            int overheal = amount - actualHealed;
+
+            if (actualHealed > 0)
+            {
+                Player.HealEffect(actualHealed);
+            }
+
+            if (overheal > 0)
+            {
+                OverHeal(overheal);
+            }
+
+            return actualHealed;
+        }
+
+        private void UpdateHealingPerSecond()
+        {
+            if (Main.GameUpdateCount - lastHealingSampleUpdate < TicksPerSecond)
+                return;
+
+            currentHealAmountPerSecond = healAmountAccumulator;
+            healAmountAccumulator = 0;
+            lastHealingSampleUpdate = Main.GameUpdateCount;
         }
 
         public void OverHeal(int value)
@@ -183,8 +155,8 @@ namespace LifeStealClass.Common.ModPlayers
 
             if (value > 0)
             {
-                Color overhealColor = new Color(255, 100, 180); // Rosa/Pink
-                CombatText.NewText(Player.Hitbox, overhealColor, $"{value}");
+                Color overhealColor = new Color(255, 100, 180);
+                CombatText.NewText(Player.Hitbox, overhealColor, value.ToString());
             }
         }
     }

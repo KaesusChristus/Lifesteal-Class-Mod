@@ -1,10 +1,8 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.Audio;
-using Microsoft.Xna.Framework;
-using LifeStealClass.Content.Core;
-using Terraria.ModLoader;
 using System;
+using LifeStealClass.Content.Core;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ModLoader;
 
 namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
@@ -15,11 +13,9 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         public override void SetDefaults()
         {
             base.SetDefaults();
-            
-            Projectile.width = 48;
-            Projectile.height = 40;
+            Projectile.width = 54;
+            Projectile.height = 46;
             Projectile.scale = 1.2f;
-
             Projectile.timeLeft = 60;
         }
 
@@ -27,58 +23,36 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             return new SickleStats
             {
-                SWINGRANGE = 1.67f * MathF.PI,
-                SPINRANGE = 3.5f * MathF.PI,
-
-                WINDUP = 0.15f,
-                UNWIND = 0.4f,
-                SPINTIME = 2.5f,
-
                 PrepTime = 12f,
                 ExecTime = 8f,
                 HideTime = 12f,
-
                 scale = 1.35f,
                 hitboxWidth = 15f,
-
                 rotationOffsetRight = MathHelper.ToRadians(45f),
                 rotationOffsetLeft = MathHelper.ToRadians(135f)
             };
         }
 
-        /*
-
-        public override void OnKill(int timeLeft)
+        protected override void OnAttackStarted()
         {
-            SoundEngine.PlaySound(SoundID.Item60, Projectile.position);
+            if (Main.myPlayer != Projectile.owner)
+                return;
 
-            for (int i = 0; i < 20; i++)
+            Vector2 direction = GetAttackDirection();
+            float damageMultiplier = CurrentAttack == SickleAttackType.HeavySlash ? 0.42f : 0.3f;
+
+            for (int i = -1; i <= 1; i += 2)
             {
-                Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 100, new Color(140, 27, 130), 1.8f);
-                dust.noGravity = true;
+                Vector2 velocity = direction.RotatedBy(MathHelper.ToRadians(12f * i)) * 7f;
+                Projectile.NewProjectile(
+                    Projectile.GetSource_FromThis(),
+                    Owner.MountedCenter + direction * 24f,
+                    velocity,
+                    ModContent.ProjectileType<DemoniteSoulProjectile>(),
+                    Math.Max(1, (int)(Projectile.damage * damageMultiplier)),
+                    Projectile.knockBack * 0.45f,
+                    Projectile.owner);
             }
-
-            int count = 5;
-            float speed = 7f;
-            float offsetDistance = 180f;
-
-            for (int i = 0; i < count; i++)
-            {
-                float angle = MathHelper.ToRadians(360f / count * i);
-                Vector2 direction = angle.ToRotationVector2();
-                Vector2 spawnPos = Projectile.Center + direction * offsetDistance;
-                Vector2 velocity = (direction * speed) * -0.75f;
-
-                Projectile proj = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), spawnPos, velocity, ProjectileID.LightsBane, Projectile.damage / 2, Projectile.knockBack, Projectile.owner, 1f);
-                proj.DamageType = ModContent.GetInstance<HarvesterDamage>();
-            }
-        }
-
-        */
-
-        public Color GetGlowColor()
-        {
-            return new Color(140, 27, 130);
         }
     }
 }

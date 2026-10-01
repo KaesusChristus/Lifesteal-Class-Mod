@@ -5,16 +5,19 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Common.GlobalItems.Other;
+using LifeStealClass.Common.Interfaces;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
     public abstract class LifestealWarScytheWeapon : LifeStealItem, IDashWeapon
     {
-        public float DashSpeed => 12f; // Base DashSpeed
-        public int DashDuration => 8; // Base BashDuration
-        public int DashCooldown => 240; // Base Dashcooldown in ticks (60 ticks = 1 Sec)
-        public int DashDamageBonus => 50; // Base von 50 extra damage
-        public int DashCritBonus => 70; // Base von 70 % mehr auf Critchance
+        public virtual float DashSpeed => 12f;
+        public virtual int DashDuration => 8;
+        public virtual int DashCooldown => 240;
+        public virtual int DashDamageBonus => 50;
+        public virtual int DashCritBonus => 70;
+        protected virtual int DashHealthCost => 1;
+
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SkipsInitialUseSound[Item.type] = true; // This skips use animation-tied sound playback, so that we're able to make it be tied to use time instead in the UseItem() hook.
@@ -23,6 +26,8 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
 
         public override void SetDefaults()
         {
+            base.SetDefaults();
+
             Item.width = 64;
             Item.height = 64;
             Item.scale = 1.2f;
@@ -35,7 +40,7 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
             Item.noUseGraphic = true;
             Item.noMelee = true;
 
-            Item.GetGlobalItem<HealthCost>().dashHealthCost = 1;
+            Item.GetGlobalItem<HealthCost>().dashHealthCost = DashHealthCost;
 
             var dashStats = Item.GetGlobalItem<DashBonusStats>();
             dashStats.dashDamageBonus = DashDamageBonus;

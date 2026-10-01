@@ -1,33 +1,30 @@
-﻿using Microsoft.Xna.Framework;
+using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Projectiles.Weapon.Sickle;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using LifeStealClass.Content.Core;
 
 namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public abstract class LifestealSickle : LifeStealItem
     {
-        public int attackType = 0;
-        public int comboStep = 0;
-        public int lastAttackType = 0;
-        public int comboExpireTimer = 0;
+        private int comboStep;
+        private ulong lastAttackUpdate;
 
-        protected virtual int ComboResetTime => 120;
+        protected virtual ulong ComboResetTime => 45;
 
         public override void SetDefaults()
         {
+            base.SetDefaults();
+
             Item.width = 64;
             Item.height = 64;
             Item.rare = ItemRarityID.Blue;
-
-            Item.DamageType = ModContent.GetInstance<HarvesterDamage>();
             Item.knockBack = 4f;
-
             Item.useTime = 30;
             Item.useAnimation = 30;
-
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item71;
             Item.autoReuse = true;
@@ -35,37 +32,49 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.noMelee = true;
         }
 
-        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        public override bool Shoot(
+            Player player,
+            EntitySource_ItemUse_WithAmmo source,
+            Vector2 position,
+            Vector2 velocity,
+            int type,
+            int damage,
+            float knockback)
         {
-            int attack;
-
-            if (comboStep < 2)
+            ulong currentUpdate = Main.GameUpdateCount;
+            if (currentUpdate - lastAttackUpdate > ComboResetTime)
             {
-                attack = 0; // Swing
-                comboStep++;
-            }
-            else
-            {
-                attack = 1; // Spin
                 comboStep = 0;
             }
 
-            lastAttackType = attack;
+            SickleAttackType attack = (SickleAttackType)comboStep;
+            ConfigureAttack(attack);
 
-            Projectile.NewProjectile(source, position, velocity, type, damage, knockback,
-                Main.myPlayer,
-                attack,
-                comboStep);
+            Projectile.NewProjectile(
+                source,
+                position,
+                velocity,
+                type,
+                damage,
+                knockback,
+                player.whoAmI,
+                (float)attack);
 
-            comboExpireTimer = 0;
-
+            comboStep = (comboStep + 1) % 3;
+            lastAttackUpdate = currentUpdate;
             return false;
         }
 
         public override void UpdateInventory(Player player)
         {
-            if (comboExpireTimer++ >= ComboResetTime)
+            if (comboStep != 0 && Main.GameUpdateCount - lastAttackUpdate > ComboResetTime)
+            {
                 comboStep = 0;
+            }
+        }
+
+        protected virtual void ConfigureAttack(SickleAttackType attack)
+        {
         }
 
         public override bool MeleePrefix() => true;

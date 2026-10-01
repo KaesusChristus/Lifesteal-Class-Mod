@@ -16,7 +16,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
             Projectile.width = 128;
             Projectile.height = 128;
 
-            Projectile.aiStyle = 19;
+            Projectile.aiStyle = ProjAIStyleID.Spear;
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;

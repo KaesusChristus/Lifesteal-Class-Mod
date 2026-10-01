@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Core;
+using LifeStealClass.Common.ModPlayers;
 
 namespace LifeStealClass.Content.Items.Accessories
 {
