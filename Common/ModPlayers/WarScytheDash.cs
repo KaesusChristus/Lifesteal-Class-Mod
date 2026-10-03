@@ -7,6 +7,7 @@ using System;
 using LifeStealClass.Common.GlobalItems.Other;
 using Microsoft.Xna.Framework.Graphics;
 using LifeStealClass.Common.Interfaces;
+using LifeStealClass.Content.Prefixes;
 
 namespace LifeStealClass.Common.ModPlayers
 {
@@ -39,7 +40,9 @@ namespace LifeStealClass.Common.ModPlayers
                 return;
 
             // 🔹 Health Cost
-            int dashCost = item.GetGlobalItem<HealthCost>().dashHealthCost;
+            int dashCost = WarScythePrefixPool.GetDashHealthCost(
+                item,
+                item.GetGlobalItem<HealthCost>().dashHealthCost);
 
             if (dashCost > 0)
             {
@@ -59,19 +62,24 @@ namespace LifeStealClass.Common.ModPlayers
             }
 
             // 🔹 Dash starten
-            dashVelocity = direction.SafeNormalize(Vector2.Zero) * dashItem.DashSpeed;
-            dashTimer = dashItem.DashDuration;
+            dashVelocity = direction.SafeNormalize(Vector2.Zero)
+                * WarScythePrefixPool.GetDashSpeed(item, dashItem.DashSpeed);
+            dashTimer = WarScythePrefixPool.GetDashDuration(item, dashItem.DashDuration);
 
-            dashCooldownTimer = dashItem.DashCooldown;
-            maxDashCooldown = dashItem.DashCooldown;
+            dashCooldownTimer = WarScythePrefixPool.GetDashCooldown(item, dashItem.DashCooldown);
+            maxDashCooldown = dashCooldownTimer;
 
             activeSpearProjType = spearProjectileType;
             activeSpearSpeed = spearSpeed;
 
-            dashDamageBonus = dashItem.DashDamageBonus;
-            dashCritBonus = dashItem.DashCritBonus;
+            dashDamageBonus = WarScythePrefixPool.GetDashDamageBonus(
+                item,
+                dashItem.DashDamageBonus);
+            dashCritBonus = WarScythePrefixPool.GetDashCritBonus(
+                item,
+                dashItem.DashCritBonus);
 
-            SoundEngine.PlaySound(SoundID.Item9, Player.position);
+            SoundEngine.PlaySound(SoundID.Item74, Player.Center);
 
             for (int i = 0; i < 10; i++)
             {
@@ -103,6 +111,7 @@ namespace LifeStealClass.Common.ModPlayers
                 );
 
                 Projectile p = Main.projectile[proj];
+                p.ai[2] = 1f;
                 Player.heldProj = proj;
                 p.timeLeft = 60;
                 p.netUpdate = true;

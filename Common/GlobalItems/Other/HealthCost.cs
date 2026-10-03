@@ -5,6 +5,8 @@ using Terraria.ID;
 using LifeStealClass.Common.ModPlayers;
 using Microsoft.Xna.Framework;
 using System;
+using LifeStealClass.Content.Prefixes;
+using LifeStealClass.Common.Interfaces;
 
 namespace LifeStealClass.Common.GlobalItems.Other
 {
@@ -106,13 +108,14 @@ namespace LifeStealClass.Common.GlobalItems.Other
             }
 
             // Dash HealthCost
-            if (global.dashHealthCost > 0)
+            if (global.dashHealthCost > 0 && item.ModItem is not IDashWeapon)
             {
                 int reduction = 0;
                 if (Main.LocalPlayer != null && Main.LocalPlayer.TryGetModPlayer(out LifestealEffectsPlayer modPlayer))
                     reduction = modPlayer.reduceLifecostFlat;
 
-                int displayDashCost = Math.Max(0, global.dashHealthCost - reduction);
+                int prefixCost = WarScythePrefixPool.GetDashHealthCost(item, global.dashHealthCost);
+                int displayDashCost = Math.Max(0, prefixCost - reduction);
 
                 var line = new TooltipLine(Mod, "DashHealthCost", $"Dash uses {displayDashCost} health")
                 {

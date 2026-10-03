@@ -9,8 +9,13 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 {
     public class DarkHalberdProjectile : BaseSpearProjectile
     {
-        public override float HoldoutRangeMin => 40f; // Spitze
-        public override float HoldoutRangeMax => 160f; // Ende
+        public override WarScytheStats GetStats()
+        {
+            WarScytheStats stats = base.GetStats();
+            stats.WeaponLength = 174f;
+            stats.HitboxWidth = 20f;
+            return stats;
+        }
 
         public override void SetDefaults()
         {
@@ -25,7 +30,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
             // Dust Effect
             if (Main.rand.NextBool(3))
             {
-                Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Blood, Projectile.velocity.X * 2f, Projectile.velocity.Y * 2f, Alpha: 128, Scale: 1.2f);
+                Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Blood, AttackDirection.X * 2f, AttackDirection.Y * 2f, Alpha: 128, Scale: 1.2f);
             }
 
             if (Main.rand.NextBool(4))

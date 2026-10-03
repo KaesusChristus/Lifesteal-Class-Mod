@@ -357,6 +357,17 @@ Mods: {
 			CumbersomeScythePrefix.DisplayName: Cumbersome
 			CrackedScythePrefix.DisplayName: Cracked
 			SoulforgedScythePrefix.DisplayName: Soulforged
+			PiercingWarScythePrefix.DisplayName: Piercing
+			SweepingWarScythePrefix.DisplayName: Sweeping
+			ChargingWarScythePrefix.DisplayName: Charging
+			FrenziedWarScythePrefix.DisplayName: Frenzied
+			HulkingWarScythePrefix.DisplayName: Hulking
+			BloodthirstyWarScythePrefix.DisplayName: Bloodthirsty
+			RecklessWarScythePrefix.DisplayName: Reckless
+			BluntedWarScythePrefix.DisplayName: Blunted
+			CumbersomeWarScythePrefix.DisplayName: Cumbersome
+			CrackedWarScythePrefix.DisplayName: Cracked
+			ReaperforgedWarScythePrefix.DisplayName: Reaperforged
 		}
 
 		Projectiles: {

@@ -9,8 +9,21 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 {
     public class SpearFromTheDevilProjectile : BaseSpearProjectile
     {
-        public override float HoldoutRangeMin => 50f; // Spitze
-        public override float HoldoutRangeMax => 220; // Ende
+        public override WarScytheStats GetStats()
+        {
+            WarScytheStats stats = base.GetStats();
+            stats.ThrustTime = 6f;
+            stats.SwingTime = 9f;
+            stats.RecoverTime = 5f;
+            stats.ThrustStartGrip = 100f;
+            stats.ThrustEndGrip = 50f;
+            stats.SwingGrip = 75f;
+            stats.RecoverGrip = 100f;
+            stats.DashGrip = 75f;
+            stats.WeaponLength = 218f;
+            stats.HitboxWidth = 22f;
+            return stats;
+        }
 
         public override void SetDefaults()
         {
@@ -27,7 +40,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, Projectile.velocity.X * 2f, Projectile.velocity.Y * 2f, Alpha: 128, Scale: 1.2f);
+                    Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, AttackDirection.X * 2f, AttackDirection.Y * 2f, Alpha: 128, Scale: 1.2f);
                     Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, Alpha: 128, Scale: 0.3f);
                 }
             }

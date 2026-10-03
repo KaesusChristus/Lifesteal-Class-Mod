@@ -20,13 +20,18 @@ namespace LifeStealClass.Common.Systems
             return !ReferenceEquals(item, lockedItem);
         }
 
-        public static void RegisterSoulforged(Item item)
+        public static void RegisterBestReforge(Item item)
         {
             lockedItem = item;
             pendingRainbowPopup = true;
 
             SoundEngine.PlaySound(BestReforgeSound);
             SpawnBestReforgeDust(item.Center);
+        }
+
+        public static void RegisterSoulforged(Item item)
+        {
+            RegisterBestReforge(item);
         }
 
         public override void PostUpdateEverything()

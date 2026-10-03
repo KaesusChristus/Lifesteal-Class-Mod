@@ -8,8 +8,19 @@ namespace LifeStealClass.Content.Projectiles.Weapon.WarScythe
 {
     public class MandibleStrikerProjectile : BaseSpearProjectile
     {
-        public override float HoldoutRangeMin => 40f; // Spitze
-        public override float HoldoutRangeMax => 100f; // Ende
+        public override WarScytheStats GetStats()
+        {
+            WarScytheStats stats = base.GetStats();
+            stats.ThrustStartGrip = 42f;
+            stats.ThrustEndGrip = 20f;
+            stats.SwingGrip = 32f;
+            stats.RecoverGrip = 42f;
+            stats.DashGrip = 32f;
+            stats.WeaponLength = 88f;
+            stats.HitboxWidth = 12f;
+            stats.Scale = 1.2f;
+            return stats;
+        }
 
         public override void SetDefaults()
         {

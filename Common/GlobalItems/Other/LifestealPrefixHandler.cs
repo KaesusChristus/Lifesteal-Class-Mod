@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using LifeStealClass.Content.Items.Weapons.WarScythe;
 using Terraria.Utilities;
+using LifeStealClass.Content.Prefixes;
 
 namespace LifeStealClass.Common.GlobalItems.Other
 {
@@ -12,7 +13,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
         {
             if (item.ModItem is LifestealWarScytheWeapon)
             {
-                return true;
+                return WarScythePrefixPool.Contains(pre);
             }
             return base.AllowPrefix(item, pre);
         }
@@ -21,30 +22,7 @@ namespace LifeStealClass.Common.GlobalItems.Other
         {
             if (item.ModItem is LifestealWarScytheWeapon)
             {
-                int[] possiblePrefixes = new int[]
-                {
-                    PrefixID.Legendary,
-                    PrefixID.Godly,
-                    PrefixID.Demonic,
-                    PrefixID.Forceful,
-                    PrefixID.Hurtful,
-                    PrefixID.Strong,
-                    PrefixID.Unpleasant,
-                    PrefixID.Weak,
-                    PrefixID.Ruthless,
-                    PrefixID.Broken,
-                    PrefixID.Damaged,
-                    PrefixID.Shoddy,
-                    PrefixID.Massive,
-                    PrefixID.Savage,
-                    PrefixID.Slow,
-                    PrefixID.Sluggish,
-                    PrefixID.Lazy,
-                    PrefixID.Annoying,
-                    PrefixID.Nasty
-                };
-
-                return possiblePrefixes[rand.Next(possiblePrefixes.Length)];
+                return WarScythePrefixPool.Choose(rand);
             }
 
             return base.ChoosePrefix(item, rand);

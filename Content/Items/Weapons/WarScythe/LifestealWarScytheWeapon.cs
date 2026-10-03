@@ -6,6 +6,9 @@ using Microsoft.Xna.Framework;
 using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Common.GlobalItems.Other;
 using LifeStealClass.Common.Interfaces;
+using LifeStealClass.Common.Systems;
+using LifeStealClass.Content.Prefixes;
+using Terraria.Utilities;
 
 namespace LifeStealClass.Content.Items.Weapons.WarScythe
 {
@@ -79,5 +82,37 @@ namespace LifeStealClass.Content.Items.Weapons.WarScythe
             }
             return null;
         }
+
+        public override int ChoosePrefix(UnifiedRandom rand)
+        {
+            return WarScythePrefixPool.Choose(rand);
+        }
+
+        public override bool AllowPrefix(int pre)
+        {
+            return WarScythePrefixPool.Contains(pre);
+        }
+
+        public override bool? PrefixChance(int pre, UnifiedRandom rand)
+        {
+            if (pre > 0 && !WarScythePrefixPool.Contains(pre))
+                return false;
+
+            return null;
+        }
+
+        public override bool CanReforge()
+        {
+            return ScytheReforgeFeedbackSystem.CanReforge(Item);
+        }
+
+        public override void PostReforge()
+        {
+            if (Item.prefix == WarScythePrefixPool.BestPrefixType)
+                ScytheReforgeFeedbackSystem.RegisterBestReforge(Item);
+        }
+
+        public override bool MeleePrefix() => false;
+        public override bool WeaponPrefix() => false;
     }
 }
