@@ -9,6 +9,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class ShadowsWisdom : LifestealSickle
     {
+        protected override int HeavyHitHeal => 9;
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -28,7 +30,6 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.shoot = ModContent.ProjectileType<ShadowsWisdomProjectile>();
             Item.shootSpeed = 7f;
 
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 3;
         }
 
         public override void AddRecipes()

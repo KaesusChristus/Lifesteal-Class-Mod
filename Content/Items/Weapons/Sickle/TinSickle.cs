@@ -8,6 +8,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class TinSickle : LifestealSickle
     {
+        protected override int HeavyHitHeal => 1;
+
         public override void SetDefaults()
         {
             base.SetDefaults();

@@ -345,6 +345,20 @@ Mods: {
 				'''
 		}
 
+		Prefixes: {
+			HonedScythePrefix.DisplayName: Honed
+			SweepingScythePrefix.DisplayName: Sweeping
+			RelentlessScythePrefix.DisplayName: Relentless
+			FrenziedScythePrefix.DisplayName: Frenzied
+			HulkingScythePrefix.DisplayName: Hulking
+			GlassEdgedScythePrefix.DisplayName: Glass-Edged
+			RecklessScythePrefix.DisplayName: Reckless
+			BluntedScythePrefix.DisplayName: Blunted
+			CumbersomeScythePrefix.DisplayName: Cumbersome
+			CrackedScythePrefix.DisplayName: Cracked
+			SoulforgedScythePrefix.DisplayName: Soulforged
+		}
+
 		Projectiles: {
 			CrystalThornProjectile.DisplayName: Crystal Thorn Projectile
 			ToothOfCthulhuProjectile.DisplayName: Tooth Of Cthulhu Projectile

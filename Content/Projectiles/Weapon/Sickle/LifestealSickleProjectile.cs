@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using LifeStealClass.Common.Interfaces;
 using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Prefixes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +13,7 @@ using Terraria.ModLoader;
 
 namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 {
-    public abstract class LifestealSickleProjectile : ModProjectile
+    public abstract class LifestealSickleProjectile : ModProjectile, IConditionalHitHealProjectile
     {
         protected enum AttackStage
         {
@@ -47,6 +49,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         }
 
         private float visualScale;
+        private bool hasHealedOnHit;
 
         protected SickleAttackType CurrentAttack => (SickleAttackType)Projectile.ai[0];
         protected Player Owner => Main.player[Projectile.owner];
@@ -78,9 +81,19 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             };
         }
 
+        public bool TryConsumeHitHeal()
+        {
+            if (CurrentAttack != SickleAttackType.HeavySlash || hasHealedOnHit)
+                return false;
+
+            hasHealedOnHit = true;
+            return true;
+        }
+
         private SickleStats Stats => GetStats();
         private AttackProfile Profile => GetAttackProfile(CurrentAttack);
-        private float AttackSpeed => Owner.GetTotalAttackSpeed(Projectile.DamageType);
+        private float AttackSpeed => Owner.GetTotalAttackSpeed(Projectile.DamageType)
+            * ScythePrefixPool.GetSwingSpeedMultiplier(Owner.HeldItem);
         private float PrepTime => Math.Max(1f, Stats.PrepTime * Profile.PrepareMultiplier / AttackSpeed);
         private float ExecTime => Math.Max(1f, Stats.ExecTime * Profile.ExecuteMultiplier / AttackSpeed);
         private float RecoverTime => Math.Max(1f, Stats.HideTime * Profile.RecoveryMultiplier / AttackSpeed);
@@ -236,7 +249,8 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             }
             else if (CurrentAttack == SickleAttackType.HeavySlash)
             {
-                modifiers.FinalDamage *= 1.65f;
+                modifiers.FinalDamage *= 1.65f
+                    * ScythePrefixPool.GetHeavyDamageMultiplier(Owner.HeldItem);
                 modifiers.Knockback *= 1.6f;
             }
         }
@@ -250,7 +264,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             if (Main.myPlayer != Projectile.owner)
                 return;
 
-            Vector2 direction = GetAimRotation().ToRotationVector2();
+            Vector2 direction = GetAttackDirection();
             float damageMultiplier = CurrentAttack == SickleAttackType.HeavySlash ? 0.9f : 0.55f;
 
             Projectile.NewProjectile(
@@ -268,7 +282,7 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
 
         protected Vector2 GetAttackDirection()
         {
-            return GetAimRotation().ToRotationVector2();
+            return AimAngle.ToRotationVector2();
         }
 
         private static AttackProfile GetAttackProfile(SickleAttackType attack)
@@ -358,12 +372,6 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
         {
             float facingAngle = Projectile.spriteDirection > 0 ? 0f : MathHelper.Pi;
             return facingAngle + Projectile.spriteDirection * (GetLocalAimAngle() + localSwingAngle);
-        }
-
-        private float GetAimRotation()
-        {
-            float facingAngle = Projectile.spriteDirection > 0 ? 0f : MathHelper.Pi;
-            return facingAngle + Projectile.spriteDirection * GetLocalAimAngle();
         }
 
         private float GetLocalAimAngle()

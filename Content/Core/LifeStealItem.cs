@@ -21,5 +21,13 @@ namespace LifeStealClass.Content.Core
                 damageTooltip.OverrideColor = new Color(180, 0, 0);
             }
         }
+
+        public override bool ReforgePrice(ref int reforgePrice, ref bool canApplyDiscount)
+        {
+            // Most Harvester items declare a sell value. Terraria stores that as five
+            // times the displayed amount, which otherwise makes reforging excessive.
+            reforgePrice = System.Math.Max(1, reforgePrice / 5);
+            return true;
+        }
     }
 }

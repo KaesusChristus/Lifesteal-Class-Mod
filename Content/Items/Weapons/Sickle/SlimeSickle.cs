@@ -7,6 +7,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class SlimeSickle : LifestealSickle
     {
+        protected override int HeavyHitHeal => 6;
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -21,7 +23,6 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.shoot = ModContent.ProjectileType<SlimeSickleProjectile>();
             Item.shootSpeed = 7f;
 
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
         }
     }
 }

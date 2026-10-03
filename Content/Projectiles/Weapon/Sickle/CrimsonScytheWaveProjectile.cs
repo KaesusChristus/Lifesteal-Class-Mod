@@ -26,8 +26,8 @@ namespace LifeStealClass.Content.Projectiles.Weapon.Sickle
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.tileCollide = false;
-            Projectile.penetrate = 1;
-            Projectile.timeLeft = 36;
+            Projectile.penetrate = 5;
+            Projectile.timeLeft = 90;
             Projectile.DamageType = ModContent.GetInstance<HarvesterDamage>();
         }
 

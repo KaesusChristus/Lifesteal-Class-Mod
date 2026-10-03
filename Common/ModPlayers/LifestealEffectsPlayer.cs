@@ -48,10 +48,17 @@ namespace LifeStealClass.Common.ModPlayers
                 return;
 
             OnHitHeal healData = sourceItem.GetGlobalItem<OnHitHeal>();
-            if (healData.baseHealOnHit > 0)
+            int totalHeal = healData.GetTotalHeal(sourceItem);
+            if (healData.baseHealOnHit == 0 || totalHeal == 0)
+                return;
+
+            if (projectile.ModProjectile is IConditionalHitHealProjectile conditionalHeal
+                && !conditionalHeal.TryConsumeHitHeal())
             {
-                SetHealAmount(healData.baseHealOnHit + healData.bonusHealOnHit);
+                return;
             }
+
+            SetHealAmount(totalHeal);
         }
 
         public void RegisterHit(int damageDone, bool isCritical)

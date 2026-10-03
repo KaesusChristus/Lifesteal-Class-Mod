@@ -8,6 +8,8 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
 {
     public class StarScythe : LifestealSickle
     {
+        protected override int HeavyHitHeal => 8;
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -16,7 +18,7 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.height = 48;
             Item.scale = 1.2f;
 
-            Item.value = Item.sellPrice(1, 20);
+            Item.value = Item.sellPrice(0, 1, 20);
             Item.rare = ItemRarityID.Orange;
 
             Item.damage = 18;
@@ -27,7 +29,6 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             Item.shoot = ModContent.ProjectileType<StarScytheProjectile>();
             Item.shootSpeed = 8f;
 
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit = 2;
         }
 
         public override void AddRecipes()
@@ -38,10 +39,5 @@ namespace LifeStealClass.Content.Items.Weapons.Sickle
             recipe.Register();
         }
 
-        protected override void ConfigureAttack(SickleAttackType attack)
-        {
-            Item.GetGlobalItem<OnHitHeal>().baseHealOnHit =
-                attack == SickleAttackType.HeavySlash ? 4 : 2;
-        }
     }
 }

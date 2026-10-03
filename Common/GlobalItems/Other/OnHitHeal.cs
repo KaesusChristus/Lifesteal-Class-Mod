@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using LifeStealClass.Common.ModPlayers;
 using LifeStealClass.Content.Core;
+using LifeStealClass.Content.Prefixes;
 
 namespace LifeStealClass.Common.GlobalItems.Other
 {
@@ -18,30 +19,45 @@ namespace LifeStealClass.Common.GlobalItems.Other
         {
             var clone = (OnHitHeal)base.Clone(item, itemClone);
             clone.baseHealOnHit = baseHealOnHit;
+            clone.bonusHealOnHit = bonusHealOnHit;
             return clone;
+        }
+
+        public int GetTotalHeal(Item item)
+        {
+            return baseHealOnHit
+                + bonusHealOnHit
+                + ScythePrefixPool.GetHealModifier(item);
         }
 
         public override void OnHitNPC(Item item, Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (baseHealOnHit > 0 && item.DamageType == ModContent.GetInstance<HarvesterDamage>())
+            if (baseHealOnHit != 0 && item.DamageType == ModContent.GetInstance<HarvesterDamage>())
             {
                 var modPlayer = player.GetModPlayer<LifestealEffectsPlayer>();
-                int totalHeal = baseHealOnHit + bonusHealOnHit;
+                int totalHeal = GetTotalHeal(item);
 
-                modPlayer.SetHealAmount(totalHeal);
+                if (totalHeal != 0)
+                {
+                    modPlayer.SetHealAmount(totalHeal);
+                }
             }
         }
 
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (baseHealOnHit > 0)
+            if (baseHealOnHit != 0)
             {
-                int total = baseHealOnHit + bonusHealOnHit;
+                int total = GetTotalHeal(item);
 
-                var line = new TooltipLine(Mod, "OnHitHeal", $"Truemelee Heal: {total}")
+                var line = new TooltipLine(Mod, "OnHitHeal", $"Heal: {total}")
                 {
-                    OverrideColor = new Color(0, 200, 0)
+                    OverrideColor = total > 0
+                        ? new Color(0, 200, 0)
+                        : total < 0
+                            ? new Color(220, 70, 70)
+                            : Color.Gray
                 };
 
                 tooltips.Add(line);
